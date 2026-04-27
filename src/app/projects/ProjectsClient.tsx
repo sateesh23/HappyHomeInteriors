@@ -176,7 +176,7 @@ export default function ProjectsClient({ initialProjects }: Props) {
           <>
             {/* Grid: 2 cols mobile, 3 cols desktop — matching reference exactly */}
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-              {displayedProjects.slice(0, 6).map((project) => (
+              {displayedProjects.map((project) => (
                 <div
                   key={project.id}
                   className="group cursor-pointer"
