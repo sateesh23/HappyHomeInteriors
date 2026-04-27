@@ -27,10 +27,10 @@ export default function Hero() {
         {/* Content — bottom-left anchored */}
         <div
           suppressHydrationWarning
-          className="absolute bottom-10 left-8 lg:bottom-16 lg:left-14 z-10 flex flex-col items-start text-left max-w-xl lg:max-w-2xl"
+          className="absolute bottom-8 left-5 right-5 sm:bottom-10 sm:left-8 sm:right-8 lg:bottom-16 lg:left-14 lg:right-auto z-10 flex flex-col items-start text-left"
         >
           {/* Location pill */}
-          <div className="flex items-center gap-1.5 text-white/80 text-xs font-semibold mb-5 tracking-wide">
+          <div className="flex items-center gap-1.5 text-white/80 text-xs font-semibold mb-4 sm:mb-5 tracking-wide">
             <MapPin className="w-3.5 h-3.5" />
             <span>Based in Visakhapatnam, AP &amp; Telangana</span>
           </div>
@@ -39,11 +39,11 @@ export default function Hero() {
           <CountUpBadge />
 
           {/* Headline */}
-          <h1 className="text-[1.75rem] min-[375px]:text-[2rem] sm:text-[3rem] lg:text-[3.75rem] font-black text-white leading-[1.2] sm:leading-[1.1] mb-5 tracking-tight w-full">
-            <div className="inline-flex items-baseline flex-nowrap whitespace-nowrap">
-              <span className="mr-2 sm:mr-3">Your</span>
+          <h1 className="text-[2rem] min-[375px]:text-[2.2rem] sm:text-[3rem] lg:text-[3.75rem] font-black text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-5 tracking-tight w-full">
+            <div className="flex flex-wrap items-baseline gap-x-2 sm:gap-x-3">
+              <span>Your</span>
               <GooeyText 
-                texts={["Dream Home", "Residential Projects", "Commercial Projects", "Restaurant & Bar"]}
+                texts={["Dream Home", "Residential Projects", "Commercial Spaces", "Restaurant & Bar"]}
                 textClassName="text-[#EA580C]"
               />
             </div>
@@ -51,21 +51,21 @@ export default function Hero() {
           </h1>
 
           {/* Subtext */}
-          <p className="text-white/75 text-base sm:text-lg leading-relaxed mb-8 max-w-lg font-medium">
+          <p className="text-white/80 text-[14px] sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-[95%] sm:max-w-lg font-medium">
             From modular kitchens to full home turnkey projects — we&apos;ve transformed 5,000+ homes across India with award-winning design and zero compromise on quality.
           </p>
 
           {/* CTA Buttons */}
-          <div suppressHydrationWarning className="flex flex-row items-center gap-2 sm:gap-3 w-full">
+          <div suppressHydrationWarning className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
             <AnimatedButton
               href="/contact#form"
               text="Start My Home Transformation"
               openModal={true}
-              className="px-3 py-2.5 text-[12px] sm:text-sm sm:px-5 sm:py-3 whitespace-nowrap flex-shrink-0"
+              className="w-full sm:w-auto px-4 py-3.5 sm:px-5 sm:py-3 text-[14px] sm:text-sm whitespace-nowrap flex-shrink-0"
             />
             <Link
               href="#projects"
-              className="group flex flex-row items-center justify-center gap-1.5 text-[12px] sm:text-sm font-bold text-[#EA580C] border-2 border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors rounded-xl px-3 py-2 sm:px-5 sm:py-2.5 whitespace-nowrap flex-shrink-0 bg-transparent"
+              className="w-full sm:w-auto group flex flex-row items-center justify-center gap-1.5 text-[14px] sm:text-sm font-bold text-[#EA580C] border-2 border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors rounded-xl px-4 py-3 sm:px-5 sm:py-2.5 whitespace-nowrap flex-shrink-0 bg-transparent"
             >
               See Our Work
               <span className="group-hover:translate-x-1 transition-transform">→</span>
