@@ -77,7 +77,7 @@ export default function ProjectsGrid({ projects }: Props) {
                          alt={project.title || "Project"}
                          fill
                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                         className="object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
+                         className={`object-cover transition-transform duration-500 ease-out ${ytId ? "scale-[1.35] group-hover:scale-[1.40]" : "group-hover:scale-[1.03]"}`}
                          loading={idx === 0 ? "eager" : "lazy"}
                          unoptimized={imgUrl.includes("supabase.co")}
                        />
@@ -90,11 +90,10 @@ export default function ProjectsGrid({ projects }: Props) {
                        <>
                          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
                          <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[#FCD34D] rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-                               <svg width="24" height="24" viewBox="0 0 24 24" fill="black" className="ml-1 sm:w-6 sm:h-6 w-5 h-5">
-                                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                               </svg>
-                            </div>
+                            <svg viewBox="0 0 68 48" className="w-12 h-12 sm:w-16 sm:h-16 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">
+                              <path className="transition-colors duration-300 fill-[#FF0000] group-hover:fill-[#CC0000]" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.26,4.81,1.48,7.74C.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" />
+                              <path fill="#ffffff" d="M 45,24 27,14 v 20 z" />
+                            </svg>
                          </div>
                        </>
                      )}
