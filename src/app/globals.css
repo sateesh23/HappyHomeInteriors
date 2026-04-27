@@ -1,26 +1,525 @@
 @import "tailwindcss";
 
+@theme {
+  /* === Happy Home Interiors Design System === */
+  --color-primary:     #EA580C;
+  --color-primary-dark:#C2410B;
+  --color-accent:      #F97316;
+  --color-black:       #0D0D0D;
+  --color-charcoal:    #1C1C1C;
+  --color-cream:       #F5F0E8;
+  --color-white:       #FFFFFF;
+
+  /* Semantic mappings */
+  --color-bg:          var(--color-white);
+  --color-bgWarm:      #F9F9F9;
+  --color-bgDark:      #111111;
+  --color-textPrimary: #0D0D0D;
+  --color-textSecondary:#6B5F4B;
+  --color-textInverse: #F5F0E8;
+
+  /* Fonts */
+  --font-sans:   "Inter", "DM Sans", sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--color-bg);
+  --foreground: var(--color-textPrimary);
+  /* Make font CSS variables available globally */
+  --font-sans: "Inter", "DM Sans", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  letter-spacing: -0.02em;
+}
+h1, h2, h3 {
+  line-height: 1.15;
+}
+
+/* ============================================
+   Section Labels
+   ============================================ */
+.section-label {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+/* ============================================
+   Hero Word-by-Word Animation
+   ============================================ */
+@keyframes wordFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-word {
+  display: inline-block;
+  opacity: 0;
+  animation: wordFadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-word-1  { animation-delay: 0.05s; }
+.hero-word-2  { animation-delay: 0.15s; }
+.hero-word-3  { animation-delay: 0.25s; }
+.hero-word-4  { animation-delay: 0.35s; }
+.hero-word-5  { animation-delay: 0.45s; }
+.hero-word-6  { animation-delay: 0.55s; }
+.hero-word-7  { animation-delay: 0.65s; }
+.hero-word-8  { animation-delay: 0.75s; }
+.hero-word-9  { animation-delay: 0.85s; }
+.hero-word-10 { animation-delay: 0.95s; }
+.hero-word-11 { animation-delay: 1.05s; }
+.hero-word-12 { animation-delay: 1.15s; }
+
+@keyframes heroImageSlide {
+  from {
+    opacity: 0;
+    transform: translateX(40px) rotate(var(--rot, 0deg));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(var(--rot, 0deg));
+  }
+}
+
+.hero-img-1 { --rot: 3deg;  animation: heroImageSlide 1s ease 0.4s both; }
+.hero-img-2 { --rot: -4deg; animation: heroImageSlide 1s ease 0.65s both; }
+.hero-img-3 { --rot: 2deg;  animation: heroImageSlide 1s ease 0.9s both; }
+
+/* ============================================
+   Scroll Reveal Animations
+   Content is ALWAYS visible — animation is enhancement only
+   ============================================ */
+.animate-reveal {
+  /* NO opacity:0 — content always shows */
+  transform: translateY(16px);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  opacity: 1; /* always visible */
+}
+
+.animate-reveal.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Reduce motion — skip animation entirely */
+@media (prefers-reduced-motion: reduce) {
+  .animate-reveal,
+  .animate-reveal.is-visible {
+    transform: none;
+    transition: none;
+  }
+}
+
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* --- Marquee Animations --- */
+@layer utilities {
+  @keyframes scroll-left {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(-50%, 0, 0); }
+  }
+
+  @keyframes scroll-right {
+    from { transform: translate3d(-50%, 0, 0); }
+    to { transform: translate3d(0, 0, 0); }
+  }
+
+  .animate-marquee-left {
+    animation: scroll-left 40s linear infinite !important;
+    will-change: transform;
+  }
+
+  .animate-marquee-right {
+    animation: scroll-right 40s linear infinite !important;
+    will-change: transform;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+
+.delay-600 { transition-delay: 600ms; }
+
+/* ============================================
+   Testimonials Infinite Carousel
+   ============================================ */
+@keyframes scrollCarousel {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scrollCarousel 40s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+/* ============================================
+   USP Card Hover Lift
+   ============================================ */
+.usp-card {
+  background: #fff;
+  border-radius: 12px;
+  border-top: 3px solid var(--color-gold);
+  padding: 2rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: default;
+}
+
+.usp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(201, 168, 76, 0.15), 0 4px 12px rgba(0,0,0,0.06);
+  border-top-color: var(--color-gold-light);
+}
+
+/* ============================================
+   Project Card Hover Overlay
+   ============================================ */
+.project-card .overlay {
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover .overlay {
+  transform: translateY(0);
+}
+
+.project-card img {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   Primary Button
+   ============================================ */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.875rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-gold:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(234, 88, 12, 0.35);
+}
+
+.btn-ghost-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.875rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,0.5);
+  transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-ghost-white:hover {
+  border-color: #fff;
+  background-color: rgba(255,255,255,0.08);
+  transform: translateY(-2px);
+}
+
+.btn-ghost-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 0.625rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 1.5px solid var(--color-primary);
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-ghost-gold:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   Award Card
+   ============================================ */
+.award-card {
+  background: var(--color-charcoal-2);
+  border: 1px solid rgba(234, 88, 12, 0.3);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* ============================================
+   Diagonal texture for Why Choose Us
+   ============================================ */
+.diagonal-texture {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 20px,
+    rgba(234, 88, 12, 0.04) 20px,
+    rgba(234, 88, 12, 0.04) 21px
+  );
+}
+
+/* ============================================
+   Location badge pills
+   ============================================ */
+.location-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1.5px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-black);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.location-pill:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* ============================================
+   Filter tab active state
+   ============================================ */
+.filter-tab {
+  padding: 0.5rem 1.25rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1.5px solid #ddd;
+  background: transparent;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.filter-tab:hover,
+.filter-tab.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+/* ============================================
+   Admin sidebar styles
+   ============================================ */
+.admin-sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #9ca3af;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.admin-sidebar-link:hover,
+.admin-sidebar-link.active {
+  background-color: rgba(234, 88, 12, 0.12);
+  color: var(--color-primary);
+}
+
+/* ============================================
+   Scrollbar styling
+   ============================================ */
+.carousel-wrapper::-webkit-scrollbar { display: none; }
+.carousel-wrapper { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ============================================
+   Video Testimonials Marquee
+   ============================================ */
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.testimonials-track {
+  animation: marquee-scroll 45s linear infinite;
+  will-change: transform;
+}
+
+.testimonials-track:hover {
+  animation-play-state: paused;
+}
+
+/* ============================================
+   Snowball Loader
+   ============================================ */
+.pl {
+  width: 10em;
+  height: 10em;
+  position: relative;
+  font-size: 10px; /* Scaling factor */
+  margin: 0 auto;
+}
+.pl__outer-ring {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: 4px solid rgba(234, 88, 12, 0.1); /* Orange base */
+}
+.pl__inner-ring {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  border: 4px solid rgba(234, 88, 12, 0.1);
+}
+.pl__track-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(rgba(234, 88, 12, 0.2) 0deg, transparent 90deg);
+  animation: trackCover 2s linear infinite;
+}
+.pl__ball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 2em;
+  margin-top: -1em;
+  margin-left: -1em;
+  border-radius: 50%;
+  background: #EA580C; /* Orange ball */
+  animation: ball 2s infinite cubic-bezier(0.65, 0, 0.35, 1);
+  box-shadow: 0 0 10px rgba(234, 88, 12, 0.5);
+  overflow: hidden;
+}
+.pl__ball-texture {
+  width: 200%;
+  height: 100%;
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,0.2) 0 10%, transparent 10% 20%);
+  animation: ballTexture 0.5s linear infinite;
+}
+
+@keyframes ball {
+  from {
+    transform: rotate(0) translateY(-4em) rotate(0);
+  }
+  50% {
+    transform: rotate(180deg) translateY(-3.5em) rotate(-180deg);
+  }
+  to {
+    transform: rotate(360deg) translateY(-4em) rotate(-360deg);
+  }
+}
+
+@keyframes ballTexture {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes trackCover {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+

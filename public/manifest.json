@@ -1,0 +1,16 @@
+{
+  "name": "Happy Home Interiors",
+  "short_name": "Happy Home",
+  "description": "Award-winning interior designers in Visakhapatnam. Modular kitchens, full home turnkey, false ceilings & more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#EA580C",
+  "icons": [
+    {
+      "src": "/icon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
