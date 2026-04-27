@@ -145,6 +145,31 @@ export default function AdminProjectsPage() {
     setProjects((prev) => prev.filter((p) => p.id !== id));
   }
 
+  async function toggleFeatured(id: string, currentStatus: boolean) {
+    const currentlyFeatured = projects.filter(p => p.is_featured).length;
+    if (!currentStatus && currentlyFeatured >= 6) {
+      setMsg("You can only feature up to 6 projects on the homepage. Please unfeature one first.");
+      setTimeout(() => setMsg(""), 4000);
+      return;
+    }
+
+    // Optimistic UI update
+    setProjects(prev => prev.map(p => p.id === id ? { ...p, is_featured: !currentStatus } : p));
+    
+    const res = await fetch("/api/admin/projects", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id, is_featured: !currentStatus })
+    });
+    
+    if (!res.ok) {
+      // Revert if failed
+      setProjects(prev => prev.map(p => p.id === id ? { ...p, is_featured: currentStatus } : p));
+      setMsg("Failed to update homepage visibility.");
+      setTimeout(() => setMsg(""), 3000);
+    }
+  }
+
   return (
     <div className="p-8">
       <div className="flex justify-between items-center mb-8">
@@ -275,7 +300,7 @@ export default function AdminProjectsPage() {
                   <th className="text-left text-gray-500 text-[10px] font-bold uppercase tracking-widest px-6 py-4 w-16">Preview</th>
                   <th className="text-left text-gray-500 text-[10px] font-bold uppercase tracking-widest px-6 py-4">Title & Client</th>
                   <th className="text-left text-gray-500 text-[10px] font-bold uppercase tracking-widest px-6 py-4 hidden md:table-cell">Type & Location</th>
-                  <th className="text-left text-gray-500 text-[10px] font-bold uppercase tracking-widest px-6 py-4 hidden lg:table-cell">Featured</th>
+                  <th className="text-left text-gray-500 text-[10px] font-bold uppercase tracking-widest px-6 py-4 hidden lg:table-cell">Homepage (Max 6)</th>
                   <th className="text-right text-gray-500 text-[10px] font-bold uppercase tracking-widest px-6 py-4">Actions</th>
                 </tr>
               </thead>
@@ -305,11 +330,16 @@ export default function AdminProjectsPage() {
                       <p className="text-gray-600 text-xs mt-0.5">{p.location || "—"}</p>
                     </td>
                     <td className="px-6 py-4 hidden lg:table-cell">
-                      {p.is_featured ? (
-                        <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-orange-100 text-orange-700">Yes</span>
-                      ) : (
-                        <span className="text-gray-400 text-xs">No</span>
-                      )}
+                      <button 
+                        onClick={() => toggleFeatured(p.id, p.is_featured)}
+                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-[11px] font-bold transition-all shadow-sm ${
+                          p.is_featured 
+                            ? "bg-orange-100 text-orange-700 hover:bg-orange-200 border border-orange-200" 
+                            : "bg-gray-100 text-gray-500 hover:bg-gray-200 border border-gray-200"
+                        }`}
+                      >
+                        {p.is_featured ? "★ On Homepage" : "☆ Show on Home"}
+                      </button>
                     </td>
                     <td className="px-6 py-4 text-right">
                       <button onClick={() => openEdit(p)} className="text-[#EA580C] hover:text-[#C2410C] text-xs font-semibold mr-4 opacity-0 group-hover:opacity-100 transition-all">Edit</button>

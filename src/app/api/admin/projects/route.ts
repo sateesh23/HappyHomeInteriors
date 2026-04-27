@@ -140,3 +140,20 @@ export async function DELETE(req: NextRequest) {
     return NextResponse.json({ error: err.message }, { status: 500 });
   }
 }
+
+export async function PATCH(req: NextRequest) {
+  const supabase = getClient();
+  if (!supabase) return NextResponse.json({ error: "Supabase not configured" }, { status: 503 });
+
+  try {
+    const { id, is_featured } = await req.json();
+    if (!id) return NextResponse.json({ error: "Missing Project ID" }, { status: 400 });
+
+    const { error } = await supabase.from("projects").update({ is_featured }).eq("id", id);
+
+    if (error) return NextResponse.json({ error: error.message }, { status: 400 });
+    return NextResponse.json({ success: true });
+  } catch (err: any) {
+    return NextResponse.json({ error: err.message }, { status: 500 });
+  }
+}
