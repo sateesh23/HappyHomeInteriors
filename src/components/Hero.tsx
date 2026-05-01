@@ -5,7 +5,11 @@ import Link from "next/link";
 import { MapPin } from "lucide-react";
 import { GooeyText } from "@/components/ui/gooey-text-morphing";
 
-export default function Hero() {
+interface HeroProps {
+  location?: string;
+}
+
+export default function Hero({ location = "Visakhapatnam" }: HeroProps) {
   return (
     <div suppressHydrationWarning className="w-full h-screen bg-white p-[10px]">
       <section className="relative w-full h-full rounded-3xl overflow-hidden bg-[#1A1A1A]">
@@ -14,10 +18,9 @@ export default function Hero() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero_Background2.png"
-            alt="Modern luxury interior by Happy Home Interiors"
+            alt="Interior Designers in Visakhapatnam - Modern luxury interior by Happy Home Interiors"
             fill
             priority
-            unoptimized
             className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -32,14 +35,17 @@ export default function Hero() {
           {/* Location pill */}
           <div className="flex items-center gap-1.5 text-white/80 text-xs font-semibold mb-4 sm:mb-5 tracking-wide">
             <MapPin className="w-3.5 h-3.5" />
-            <span>Based in Visakhapatnam, AP &amp; Telangana</span>
+            <span>Based in {location}, AP &amp; Telangana</span>
           </div>
 
           {/* Counting Badge Array */}
           <CountUpBadge />
 
           {/* Headline */}
-          <h1 className="text-[2rem] min-[375px]:text-[2.2rem] sm:text-[3rem] lg:text-[3.75rem] font-black text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-5 tracking-tight w-full">
+          <h1 className="text-[2rem] min-[375px]:text-[2.2rem] sm:text-[3rem] lg:text-[3.75rem] font-black text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-5 tracking-tight w-full flex flex-col">
+            <span className="text-xs sm:text-sm lg:text-base font-bold text-[#EA580C] uppercase tracking-[0.15em] mb-1 sm:mb-2 opacity-90">
+              Interior Designers in {location}
+            </span>
             <div className="flex flex-wrap items-baseline gap-x-2 sm:gap-x-3">
               <span>Your</span>
               <GooeyText 

@@ -20,7 +20,7 @@ export default function ServicesSection({ services }: Props) {
             What We Do Best
           </span>
           <h2 className="text-4xl lg:text-[3.5rem] font-black text-[#0D0D0D] leading-[1.05] tracking-tight mb-6 max-w-4xl">
-            Every Room. Every Detail. One Team That Gets It <span className="text-[#EA580C]">Right.</span>
+            Premium Modular Kitchens & Turnkey Home Interiors. One Team That Gets It <span className="text-[#EA580C]">Right.</span>
           </h2>
           <p className="text-sm md:text-lg text-[#6B5F4B] max-w-3xl text-center leading-relaxed font-medium mb-10">
             From the first wall to the last coat of paint — we handle everything so you don't have to coordinate with 10 different vendors. One team. One timeline. Zero chaos.

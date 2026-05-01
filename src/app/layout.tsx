@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollObserver from "@/components/ScrollObserver";
 import LeadModal from "@/components/LeadModal";
+import ServicePopup from "@/components/ServicePopup";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
@@ -219,6 +220,56 @@ const organizationSchema = {
   ],
 };
 
+// ── SiteNavigationElement Schema → enables Google Sitelinks ──
+const sitelinksSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "SiteNavigationElement",
+      "position": 1,
+      "name": "Get a Free Estimate",
+      "description": "Book a free interior design consultation. 600+ design experts.",
+      "url": `${BASE_URL}/contact`
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 2,
+      "name": "Modular Kitchen Designs",
+      "description": "Custom modular kitchen designs in Visakhapatnam. Premium finishes.",
+      "url": `${BASE_URL}/services#modular-kitchen`
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 3,
+      "name": "Full Home Turnkey Interior",
+      "description": "Complete home interiors from design to handover. 45-90 day delivery.",
+      "url": `${BASE_URL}/services#full-home-turnkey`
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 4,
+      "name": "Interior Designers in Visakhapatnam",
+      "description": "Award-winning interior designers in Vizag. 5000+ homes delivered.",
+      "url": `${BASE_URL}/interior-designers-visakhapatnam`
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 5,
+      "name": "Interior Designers in Hyderabad",
+      "description": "Premium interior design services in Hyderabad & Telangana.",
+      "url": `${BASE_URL}/interior-designers-hyderabad`
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 6,
+      "name": "Our Projects",
+      "description": "Browse 5000+ completed interior design projects and case studies.",
+      "url": `${BASE_URL}/projects`
+    }
+  ]
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -239,9 +290,10 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <link rel="preload" as="image" href="/images/hero_Background2.png" />
 
-        {/* WebSite + Organization JSON-LD — required for site name & Knowledge Panel in Google */}
+        {/* WebSite + Organization + Sitelinks JSON-LD */}
         <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
         <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+        <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(sitelinksSchema) }} />
 
         {/* Strip browser-extension bis_skin_checked attributes before React hydration */}
         <script suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `(function(){function r(){document.querySelectorAll('[bis_skin_checked]').forEach(function(e){e.removeAttribute('bis_skin_checked');});}r();if(typeof MutationObserver!=='undefined'){new MutationObserver(r).observe(document.documentElement,{attributes:true,subtree:true,attributeFilter:['bis_skin_checked']});}})();` }} />
@@ -255,6 +307,7 @@ export default function RootLayout({
         <Footer />
         <ScrollObserver />
         <LeadModal />
+        <ServicePopup />
         <GoogleAnalytics gaId="G-XXXXXXXXXX" />
       </body>
     </html>

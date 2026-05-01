@@ -76,7 +76,7 @@ export const SERVICES: Service[] = [
     short: "Kitchens Built for the Way Indians Actually Cook. Powerful storage, smart layouts, and finishes that handle daily cooking.",
     description: "Powerful storage, smart layouts, and finishes that handle daily cooking heat, oil, and spills — without losing style. Whether you love open shelves or full-shutter cabinets, we design it around your habits, not a catalog.",
     features: ["Indian Cooking Specific", "Smart Layouts", "Heat & Oil Resistant", "Custom Habits Based"],
-    image: "/images/services/Modular-Kitchen.png",
+    image: "/images/services/modular-kitchen-vizag-modern-design.png",
     category: "Kitchen",
     cta: "Design My Dream Kitchen →",
     headline: "Kitchens Built for the Way Indians Actually Cook"
@@ -88,7 +88,7 @@ export const SERVICES: Service[] = [
     short: "Ceilings & Floors That Make Every Room Feel Bigger. Transform a flat room into a luxury space.",
     description: "The right ceiling design can transform a flat room into a luxury space. Paired with the perfect flooring — marble, vinyl, or hardwood-finish — we create interiors that look like a 5-star hotel and feel like your home.",
     features: ["Luxury Ambience", "Hotel-like Feel", "Space Optimization", "Marble & Hardwood Options"],
-    image: "/images/services/False-Ceiling-Floorings.png",
+    image: "/images/services/false-ceiling-flooring-design-hyderabad.png",
     category: "Ceiling",
     cta: "See Ceiling & Floor Designs →",
     headline: "Ceilings & Floors That Make Every Room Feel Bigger"
@@ -100,7 +100,7 @@ export const SERVICES: Service[] = [
     short: "Bedrooms Designed for Deep Rest and Smart Storage. Custom wardrobes, headboards, and lighting.",
     description: "Your bedroom should feel like a retreat — not a storage room with a bed. We design custom wardrobes, headboards, and lighting that maximize space and give every bedroom that calm, curated feel you've always wanted.",
     features: ["Retreat Style", "Smart Storage", "Custom Headboards", "Calm & Curated"],
-    image: "/images/services/Bedroom-Wardrobes.png",
+    image: "/images/services/bedroom-wardrobe-design-visakhapatnam.png",
     category: "Bedroom",
     cta: "Plan My Bedroom & Wardrobe →",
     headline: "Bedrooms Designed for Deep Rest and Smart Storage"
@@ -112,7 +112,7 @@ export const SERVICES: Service[] = [
     short: "Hand Us the Keys. We'll Hand Back Your Dream Home. Move-in ready home — we manage everything.",
     description: "From bare walls to fully furnished, move-in ready home — we manage everything. Design, materials, execution, supervision, and final delivery. You stay stress-free while we build the home your family deserves.",
     features: ["End-to-End Management", "Full Furnishing", "Stress-Free Process", "Final Delivery Focus"],
-    image: "/images/services/Full-Home-Turnkey.png",
+    image: "/images/services/full-home-turnkey-interior-vizag.png",
     category: "Full Home",
     cta: "Get My Full Home Quote →",
     headline: "Hand Us the Keys. We'll Hand Back Your Dream Home."
@@ -124,7 +124,7 @@ export const SERVICES: Service[] = [
     short: "No Leaks. No Heat. No More Worrying Every Monsoon. Advanced waterproofing and thermal cooling.",
     description: "Roof leaks and ceiling heat destroy interiors and moods. Our waterproofing and thermal cooling solutions protect your investment for years — so your beautiful home stays beautiful long after the rains.",
     features: ["Monsoon Protection", "Thermal Cooling", "Long-term Durability", "Interior Protection"],
-    image: "/images/services/Waterproof-Roof-Cooling.png",
+    image: "/images/services/waterproof-roof-cooling-services-andhra-pradesh.png",
     category: "Exterior",
     cta: "Protect My Home Now →",
     headline: "No Leaks. No Heat. No More Worrying Every Monsoon."
@@ -136,7 +136,7 @@ export const SERVICES: Service[] = [
     short: "From bare slab to finished structure — commercial and residential builds managed end-to-end, on time, on budget.",
     description: "From independent houses and villa construction to commercial complexes and retail spaces — Happy Home Interiors manages the full build cycle. Site supervision, material procurement, civil execution, and final handover — all under one accountable team across AP and Telangana.",
     features: ["Residential Construction", "Commercial Construction", "Facade & Elevation", "Turnkey Handover"],
-    image: "/images/services/Exterior-Design.png",
+    image: "/images/services/commercial-residential-construction-vizag.png",
     category: "Construction",
     cta: "Start My Construction →",
     headline: "Build It Right. Build It Once."

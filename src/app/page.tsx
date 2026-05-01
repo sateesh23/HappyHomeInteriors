@@ -30,6 +30,10 @@ const CTABanner = dynamic(() => import("@/components/CTASection"), {
   ssr: true,
 });
 
+const GoogleReviewsMarquee = dynamic(() => import("@/components/GoogleReviewsMarquee"), {
+  ssr: true,
+});
+
 
 export const revalidate = 60; // Re-fetch Supabase data max every 60s
 
@@ -37,21 +41,21 @@ export const revalidate = 60; // Re-fetch Supabase data max every 60s
 const BASE_URL = "https://happyhomeinteriors.in";
 
 export const metadata: Metadata = {
-  title: "Interior Designers in Andhra Pradesh | Happy Home Interiors",
+  title: "Interior Designers in Vizag | Modular Kitchen & Home Interiors",
   description:
-    "Award-winning interior designers in Visakhapatnam & AP. We specialize in modular kitchens, full home turnkey projects, and false ceilings. 5,000+ homes delivered.",
-  keywords: ["interior designers in andhra pradesh", "modular kitchens vizag", "turnkey interiors hyderabad", "custom wardrobes", "false ceiling designs"],
+    "Affordable & premium interior designers in Vizag. 5000+ homes delivered. Book free consultation today.",
+  keywords: ["interior designers in vizag", "interior designers in visakhapatnam", "modular kitchens vizag", "home interiors visakhapatnam", "affordable interior designers vizag"],
   alternates: { canonical: BASE_URL },
   openGraph: {
-    title: "Interior Designers in Andhra Pradesh | Happy Home Interiors",
-    description: "Award-winning interior designers in Visakhapatnam & AP. We specialize in modular kitchens, full home turnkey projects, and false ceilings.",
+    title: "Interior Designers in Vizag | Modular Kitchen & Home Interiors",
+    description: "Affordable & premium interior designers in Vizag. 5000+ homes delivered. Book free consultation today.",
     url: BASE_URL,
-    images: [{ url: `${BASE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "Happy Home Interiors Visakhapatnam" }],
+    images: [{ url: `${BASE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "Happy Home Interiors Vizag" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Interior Designers in Andhra Pradesh | Happy Home Interiors",
-    description: "Award-winning interior designers in Visakhapatnam & AP. We specialize in modular kitchens, full home turnkey projects, and false ceilings.",
+    title: "Interior Designers in Vizag | Modular Kitchen & Home Interiors",
+    description: "Affordable & premium interior designers in Vizag. 5000+ homes delivered. Book free consultation today.",
     images: [`${BASE_URL}/og-image.jpg`],
   },
 };
@@ -123,6 +127,40 @@ const reviewSchema = {
   "reviewBody": "Switching to Happy Home Interiors was a game-changer. The process was seamless and the execution was noticeably faster and more efficient than we ever imagined.",
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Modular Kitchen & Interior Design",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Happy Home Interiors"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Visakhapatnam" },
+    { "@type": "City", "name": "Hyderabad" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Interior Design Services",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Modular Kitchens",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Modular Kitchen Design" } }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Full Home Interiors",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Turnkey Interior Projects" } }
+        ]
+      }
+    ]
+  }
+};
+
 
 // Fetch data server-side, fallback to hardcoded if Supabase not configured
 async function getPageData() {
@@ -169,6 +207,9 @@ export default async function HomePage() {
       {/* SECTION 4 — Testimonials Video Marquee */}
       <TestimonialsSection />
 
+      {/* SECTION 4.5 — Google Reviews Marquee */}
+      <GoogleReviewsMarquee />
+
       {/* SECTION 5 — Featured Projects */}
       <ProjectsGrid projects={projects} />
 
@@ -182,6 +223,7 @@ export default async function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
     </>
   );
 }

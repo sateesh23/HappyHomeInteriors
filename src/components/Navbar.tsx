@@ -33,7 +33,7 @@ export default function Navbar() {
 
             {/* ── LOGO ── */}
             <Link href="/" className="flex items-center gap-2.5 flex-shrink-0">
-              <div className="w-9 h-9 rounded-md overflow-hidden border border-[#EA580C]/50 flex-shrink-0">
+              <div className="w-9 h-9 rounded-md overflow-hidden flex-shrink-0">
                 <Image
                   src="/images/IMG_6359.JPG"
                   alt="Happy Home Interiors logo"
@@ -111,7 +111,7 @@ export default function Navbar() {
         <div suppressHydrationWarning className="absolute inset-0 bg-white flex flex-col px-6 py-8">
           <div className="flex items-center justify-between w-full mb-12">
             <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-md overflow-hidden border border-[#EA580C]/50">
+              <div className="w-9 h-9 rounded-md overflow-hidden">
                 <Image src="/images/IMG_6359.JPG" alt="logo" width={36} height={36} className="w-full h-full object-cover" />
               </div>
               <span style={{ color: BLACK }} className="font-bold text-[14px]">Happy Home Interiors.</span>

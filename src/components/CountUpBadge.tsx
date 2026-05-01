@@ -40,8 +40,8 @@ export default function CountUpBadge() {
         <div className="hidden sm:flex items-center -space-x-3 mr-2.5">
           <div className="relative w-7 h-7 rounded-full border-2 border-[#1A1A1A] overflow-hidden shrink-0">
             <Image 
-              src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=100"
-              alt="Client 1"
+              src="/images/client-1.png"
+              alt="Sunitha Lavanya - Happy Home Interiors client, Visakhapatnam"
               fill
               className="object-cover"
               sizes="28px"
@@ -49,8 +49,8 @@ export default function CountUpBadge() {
           </div>
           <div className="relative w-7 h-7 rounded-full border-2 border-[#1A1A1A] overflow-hidden shrink-0 z-10">
             <Image 
-              src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100"
-              alt="Client 2"
+              src="/images/client-2.png"
+              alt="Siva Dosapati - Happy Home Interiors client, Visakhapatnam"
               fill
               className="object-cover"
               sizes="28px"
@@ -58,8 +58,8 @@ export default function CountUpBadge() {
           </div>
           <div className="relative w-7 h-7 rounded-full border-2 border-[#1A1A1A] overflow-hidden shrink-0 z-20">
             <Image 
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop"
-              alt="Client 3"
+              src="/images/client-3.png"
+              alt="Praveen Koppuravuri - Happy Home Interiors client, Visakhapatnam"
               fill
               className="object-cover"
               sizes="28px"

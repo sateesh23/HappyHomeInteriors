@@ -12,6 +12,11 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import SectionLabel from "@/components/ui/SectionLabel";
+import dynamic from "next/dynamic";
+
+const GoogleReviewsMarquee = dynamic(() => import("@/components/GoogleReviewsMarquee"), {
+  ssr: true,
+});
 
 const BASE_URL = "https://happyhomeinteriors.in";
 
@@ -224,6 +229,9 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* ── SECTION 4: Google Reviews ──────────────────────── */}
+      <GoogleReviewsMarquee />
 
       {/* ── Service Areas strip ───────────────────────────── */}
       <section className="bg-[#EA580C]/5 border-t border-[#EA580C]/10">
