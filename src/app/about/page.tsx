@@ -44,35 +44,46 @@ export default function AboutPage() {
   return (
     <main
       suppressHydrationWarning
-      className="min-h-screen bg-white text-[#0D0D0D] overflow-hidden pt-28"
+      className="min-h-screen bg-white text-[#0D0D0D] overflow-hidden pt-24 sm:pt-28"
     >
-      {/* ── 1. FOUNDER SECTION ── */}
-      <section
-        suppressHydrationWarning
-        className="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-24"
-      >
+      {/* ── PAGE HEADER ── */}
+      <section className="max-w-7xl mx-auto px-5 sm:px-8 pt-6 pb-2 sm:pt-10 sm:pb-4">
         {/* Breadcrumb */}
-        <div className="text-sm font-semibold text-[#6B5F4B] mb-12 tracking-widest uppercase text-center">
+        <nav className="text-xs font-semibold text-[#6B5F4B] mb-4 sm:mb-6 tracking-widest uppercase">
           <Link href="/" className="hover:text-[#EA580C] transition-colors">
             Home
           </Link>
-          <span className="mx-2">/</span>
-          <span className="text-[#EA580C]">Our Story</span>
-        </div>
+          <span className="mx-2 text-gray-300">/</span>
+          <span className="text-[#EA580C]">About Us</span>
+        </nav>
 
+        {/* Page Title */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0D0D0D] leading-[1.15] tracking-tight">
+          Our <span className="text-[#EA580C]">Story</span>
+        </h1>
+        <p className="mt-3 sm:mt-4 text-[#6B5F4B] text-sm sm:text-base max-w-xl leading-relaxed">
+          12+ years of turning houses into happy homes across Andhra Pradesh &amp; Telangana.
+        </p>
+      </section>
+
+      {/* ── 1. FOUNDER SECTION ── */}
+      <section
+        suppressHydrationWarning
+        className="max-w-7xl mx-auto px-5 sm:px-8 py-10 sm:py-16 lg:py-20"
+      >
         {/* Two-column layout: photo left, copy right — vertically centered */}
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+        <div className="flex flex-col lg:flex-row items-center gap-10 sm:gap-14 lg:gap-20">
 
-          {/* Founder Photo — rectangular portrait, no circle */}
+          {/* Founder Photo */}
           <div className="w-full lg:w-2/5 flex-shrink-0">
-            <div className="relative w-full max-w-md mx-auto lg:mx-0 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative w-full max-w-[320px] sm:max-w-md mx-auto lg:mx-0 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/services/founderimage.png"
                 alt="Founder of Happy Home Interiors — 12+ years of interior design experience"
                 fill
                 className="object-cover object-top"
                 priority
-                sizes="(max-width: 1024px) 100vw, 40vw"
+                sizes="(max-width: 768px) 85vw, (max-width: 1024px) 50vw, 40vw"
               />
             </div>
           </div>
@@ -81,11 +92,11 @@ export default function AboutPage() {
           <div className="flex-1 flex flex-col justify-center">
             <SectionLabel centered={false}>The Person Behind Every Project</SectionLabel>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-[#0D0D0D] leading-[1.1] mb-8 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.25rem] font-black text-[#0D0D0D] leading-[1.15] mb-5 sm:mb-8 tracking-tight">
               Your Home Deserves Someone Who&apos;s Done This <span className="text-[#EA580C]">5,000</span> Times.
-            </h1>
+            </h2>
 
-            <div className="space-y-5 text-[#6B5F4B] text-[17px] leading-relaxed">
+            <div className="space-y-4 sm:space-y-5 text-[#6B5F4B] text-[15px] sm:text-[17px] leading-relaxed">
               <p>
                 Happy Home Interiors was built on one belief: that every family in Andhra Pradesh and Telangana deserves a home they are genuinely proud of — not just one that &ldquo;looks okay.&rdquo; Over 12+ years, we have turned that belief into a proven system for modular kitchens, wardrobes, false ceilings, turnkey projects, and full home construction. Quality and durability are not a promise here — they are the only standard we know.
               </p>
@@ -97,7 +108,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="mt-10">
+            <div className="mt-8 sm:mt-10">
               <AnimatedButton
                 text="See How We Work →"
                 href="/services"
@@ -110,25 +121,24 @@ export default function AboutPage() {
       {/* ── 2. AWARDS & RECOGNITION (from homepage) ── */}
       <AwardsSection />
 
-
-      {/* ── 4. SERVICES SECTION ── */}
+      {/* ── 3. SERVICES SECTION ── */}
       <ServicesGrid />
 
-      {/* ── 5. MEET THE TEAM ── */}
+      {/* ── 4. MEET THE TEAM ── */}
       <section
         suppressHydrationWarning
-        className="max-w-7xl mx-auto px-5 sm:px-8 py-24 text-center"
+        className="max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-24 text-center"
       >
         <SectionLabel>The People You&apos;ll Work With</SectionLabel>
-        <h2 className="text-4xl sm:text-5xl font-black text-[#0D0D0D] mb-6 leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#0D0D0D] mb-4 sm:mb-6 leading-tight">
           Every Person on This Team Has Stood Inside Your <span className="text-[#EA580C]">Future</span> Home.
         </h2>
-        <p className="text-[#6B5F4B] text-lg max-w-3xl mx-auto mb-14 leading-relaxed">
+        <p className="text-[#6B5F4B] text-sm sm:text-base lg:text-lg max-w-3xl mx-auto mb-10 sm:mb-14 leading-relaxed">
           Our designers, site supervisors, and project managers do not just work from plans — they visit, they measure, they problem-solve on-site. This is the team that has delivered 5,000+ homes without a single family being left mid-project.
         </p>
 
         {/* Landscape Team Image */}
-        <div className="w-full aspect-[16/9] sm:aspect-[2.35/1] bg-gray-100 rounded-[32px] sm:rounded-[48px] overflow-hidden relative shadow-2xl">
+        <div className="w-full aspect-[16/9] sm:aspect-[2.35/1] bg-gray-100 rounded-2xl sm:rounded-[48px] overflow-hidden relative shadow-2xl">
           <Image
             src="/images/Team_image.png"
             alt="The Happy Home Interiors team — designers, site supervisors and project managers"
@@ -137,12 +147,12 @@ export default function AboutPage() {
             sizes="100vw"
           />
         </div>
-        <p className="mt-6 text-sm text-[#9C8F80] font-medium">
+        <p className="mt-4 sm:mt-6 text-xs sm:text-sm text-[#9C8F80] font-medium">
           The team behind 5,000+ happy homes across AP &amp; Telangana.
         </p>
       </section>
 
-      {/* ── 6. FINAL CTA BANNER ── */}
+      {/* ── 5. FINAL CTA BANNER ── */}
       <CTABanner />
 
       {/* Breadcrumb JSON-LD */}
@@ -150,3 +160,4 @@ export default function AboutPage() {
     </main>
   );
 }
+

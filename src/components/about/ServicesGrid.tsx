@@ -25,29 +25,29 @@ const SERVICES = [
 
 export default function ServicesGrid() {
   return (
-    <section className="bg-white py-24 border-t border-gray-100">
+    <section className="bg-white py-16 sm:py-24 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-[#EA580C] font-black text-xs uppercase tracking-widest px-4 py-2 border border-[#EA580C]/20 rounded-full mb-6 inline-block bg-[#EA580C]/5">
             Everything Under One Roof
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-[#0D0D0D] mb-5 leading-tight mt-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#0D0D0D] mb-4 sm:mb-5 leading-tight mt-4">
             Stop Coordinating 7 Contractors.<br className="hidden sm:block" /> Let Us <span className="text-[#EA580C]">Handle</span> All of It.
           </h2>
-          <p className="text-[#6B5F4B] text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[#6B5F4B] text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
             From the first design sketch to the final snag fix — every service you need to build, furnish, and finish your home, under one accountable team.
           </p>
         </div>
 
         {/* 8-card grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 min-[400px]:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {SERVICES.map(({ number, label, sub, Icon }) => (
             <div
               key={number}
               className="
-                group relative bg-white border border-gray-100 rounded-2xl p-7
-                flex flex-col gap-5 cursor-pointer overflow-hidden
+                group relative bg-white border border-gray-100 rounded-2xl p-5 sm:p-7
+                flex flex-col gap-4 sm:gap-5 cursor-pointer overflow-hidden
                 transition-all duration-300 ease-out
                 hover:-translate-y-2 hover:shadow-[0_16px_40px_rgba(234,88,12,0.13)]
                 hover:border-[#EA580C]/30
@@ -90,7 +90,7 @@ export default function ServicesGrid() {
         <div className="text-center mt-14">
           <button
             onClick={() => openLeadModal()}
-            className="inline-flex items-center justify-center px-12 py-4 rounded-2xl bg-[#EA580C] text-white font-black text-[16px] hover:bg-[#C2410C] active:scale-95 transition-all duration-200 shadow-lg shadow-[#EA580C]/25 whitespace-nowrap"
+            className="inline-flex items-center justify-center px-8 sm:px-12 py-3.5 sm:py-4 rounded-2xl bg-[#EA580C] text-white font-black text-[14px] sm:text-[16px] hover:bg-[#C2410C] active:scale-95 transition-all duration-200 shadow-lg shadow-[#EA580C]/25 whitespace-nowrap w-full sm:w-auto"
           >
             Get Your Free Design Consultation →
           </button>

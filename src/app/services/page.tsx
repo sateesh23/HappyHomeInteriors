@@ -92,21 +92,21 @@ export default async function ServicesPage() {
       </div>
 
       {/* 9. Process Section */}
-      <section className="bg-white py-24 md:py-32 relative overflow-hidden border-t border-gray-100">
+      <section className="bg-white py-16 sm:py-24 md:py-32 relative overflow-hidden border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10 w-full animate-reveal is-visible">
           
           <div className="text-center md:text-left max-w-3xl mb-16">
             <SectionLabel centered={false} className="text-center md:text-left">Our Process</SectionLabel>
 
-            <h2 className="font-playfair text-4xl sm:text-[44px] font-black text-[#0D0D0D] leading-[1.2] mb-6 whitespace-pre-wrap">
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-[44px] font-black text-[#0D0D0D] leading-[1.2] mb-4 sm:mb-6 whitespace-pre-wrap">
               {"Long-lasting Home Interiors\nTailored to Fulfill Your Needs"}
             </h2>
-            <p className="font-dmsans text-[#6B5F4B] text-[16px] leading-relaxed max-w-2xl">
+            <p className="font-dmsans text-[#6B5F4B] text-sm sm:text-[16px] leading-relaxed max-w-2xl">
               "Made for you" expresses exactly what we do. We have been designing and executing exquisite home interiors since 2004. Our interior designers possess incredible ability to understand client requirements and provide the best space planning for a house or flat.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mt-16 position-relative">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mt-10 sm:mt-16 position-relative">
             {/* Steps */}
             {[
               { id: "1", Icon: Palette, title: "Design", text: "Understanding your dreams through deep consultation and creative 3D visualisation." },

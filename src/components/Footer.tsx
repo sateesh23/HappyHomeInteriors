@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { BUSINESS_DETAILS } from "@/constants/content";
 import { MapPin, Phone, Mail } from "lucide-react";
 
-const CURRENT_YEAR = 2024;
+const CURRENT_YEAR = new Date().getFullYear();
 
 const QUICK_LINKS = [
   { href: "/about", label: "About Us" },

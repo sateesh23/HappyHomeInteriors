@@ -55,7 +55,7 @@ const localBusinessContactSchema = {
   "name": "Happy Home Interiors",
   "url": BASE_URL,
   "telephone": "+919177699570",
-  "email": "happyhomeinteriors9@gmail.com",
+  "email": "happyhomeinteriorsvizag@gmail.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Akkayapalem",

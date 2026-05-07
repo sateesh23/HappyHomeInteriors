@@ -4,7 +4,7 @@ export const BUSINESS_DETAILS = {
   location: "Akkayyapalem, Visakhapatnam",
   phone: "+91 91776 99570",
   whatsapp: "919177699570",
-  email: "happyhomeinteriors9@gmail.com",
+  email: "happyhomeinteriorsvizag@gmail.com",
   instagram: "https://www.instagram.com/_happy_home_interiors_/",
   facebook: "https://www.facebook.com/happyhomeinteriors",
   youtube: "https://www.youtube.com/@happyhomeinteriorsvizag",

@@ -141,7 +141,7 @@ const organizationSchema = {
   "description":
     "Award-winning interior designers in Visakhapatnam with 12+ years experience. Modular kitchens, full home turnkey projects, false ceilings, wardrobes, waterproofing, and commercial & residential construction across Andhra Pradesh and Telangana.",
   "telephone": "+919177699570",
-  "email": "happyhomeinteriors9@gmail.com",
+  "email": "happyhomeinteriorsvizag@gmail.com",
   "foundingDate": "2012",
   "founder": {
     "@type": "Person",
