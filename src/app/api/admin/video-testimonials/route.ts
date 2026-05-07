@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { isAdminAuthenticated } from "@/lib/adminAuth";
 
 function getClient() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -28,6 +29,7 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
+  if (!(await isAdminAuthenticated())) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   const supabase = getClient();
   if (!supabase) return NextResponse.json({ error: "Supabase not configured" }, { status: 503 });
 
@@ -46,6 +48,7 @@ export async function POST(req: NextRequest) {
 }
 
 export async function DELETE(req: NextRequest) {
+  if (!(await isAdminAuthenticated())) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   const supabase = getClient();
   if (!supabase) return NextResponse.json({ error: "Supabase not configured" }, { status: 503 });
 

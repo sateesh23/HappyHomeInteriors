@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { isAdminAuthenticated } from "@/lib/adminAuth";
 
 function getClient() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -9,6 +10,7 @@ function getClient() {
 }
 
 export async function GET() {
+  if (!(await isAdminAuthenticated())) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   const supabase = getClient();
   if (!supabase) return NextResponse.json({ enquiries: [] });
 
@@ -22,6 +24,7 @@ export async function GET() {
 }
 
 export async function PATCH(req: NextRequest) {
+  if (!(await isAdminAuthenticated())) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   const supabase = getClient();
   if (!supabase) return NextResponse.json({ error: "Supabase not configured" }, { status: 503 });
 
