@@ -28,7 +28,7 @@ export default function ServicesGrid() {
     <section className="bg-white py-16 sm:py-24 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-14">
           <span className="text-[#EA580C] font-black text-xs uppercase tracking-widest px-4 py-2 border border-[#EA580C]/20 rounded-full mb-6 inline-block bg-[#EA580C]/5">
             Everything Under One Roof
           </span>

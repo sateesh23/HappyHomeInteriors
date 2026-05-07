@@ -12,15 +12,15 @@ export default function WhyChooseUs() {
       <div suppressHydrationWarning className="max-w-7xl mx-auto w-full px-5 sm:px-8">
 
         {/* Header */}
-        <div suppressHydrationWarning className="flex flex-col flex-wrap justify-center items-center text-center mb-14 md:mb-20">
+        <div suppressHydrationWarning className="flex flex-col flex-wrap justify-center items-center text-center mb-10 md:mb-16">
           {/* Eyebrow */}
           <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] text-[#EA580C] uppercase mb-4">
             The Happy Home Promise
           </span>
-          <h2 className="text-4xl lg:text-[3.5rem] font-black text-[#0D0D0D] leading-[1.05] tracking-tight mb-6 max-w-4xl">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.5rem] font-black text-[#0D0D0D] leading-[1.05] tracking-tight mb-4 max-w-4xl">
             Why 5,000+ Homeowners <span className="text-[#EA580C]">Trusted</span> Us — and Never Had to Look Elsewhere Again
           </h2>
-          <p className="text-sm md:text-lg text-[#6B5F4B] max-w-3xl text-center leading-relaxed font-medium mb-10">
+          <p className="text-sm md:text-lg text-[#6B5F4B] max-w-3xl text-center leading-relaxed font-medium mb-8">
             Most homeowners dread the interior design process — late contractors, hidden costs, designs that look nothing like the render. We built our entire company to fix exactly that. Here's how we're different.
           </p>
           <div className="flex justify-center w-full">

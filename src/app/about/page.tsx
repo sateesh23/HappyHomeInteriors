@@ -46,10 +46,10 @@ export default function AboutPage() {
       suppressHydrationWarning
       className="min-h-screen bg-white text-[#0D0D0D] overflow-hidden pt-24 sm:pt-28"
     >
-      {/* ── PAGE HEADER ── */}
-      <section className="max-w-7xl mx-auto px-5 sm:px-8 pt-6 pb-2 sm:pt-10 sm:pb-4">
+      {/* ── PAGE HEADER — Center Aligned ── */}
+      <section className="max-w-7xl mx-auto px-5 sm:px-8 pt-6 pb-4 sm:pt-10 sm:pb-6 text-center">
         {/* Breadcrumb */}
-        <nav className="text-xs font-semibold text-[#6B5F4B] mb-4 sm:mb-6 tracking-widest uppercase">
+        <nav className="text-xs font-semibold text-[#6B5F4B] mb-3 sm:mb-4 tracking-widest uppercase">
           <Link href="/" className="hover:text-[#EA580C] transition-colors">
             Home
           </Link>
@@ -58,57 +58,56 @@ export default function AboutPage() {
         </nav>
 
         {/* Page Title */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0D0D0D] leading-[1.15] tracking-tight">
-          Our <span className="text-[#EA580C]">Story</span>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0D0D0D] leading-[1.15] tracking-tight mb-2 sm:mb-3">
+          The Story Behind <span className="text-[#EA580C]">5,000+</span> Happy Homes
         </h1>
-        <p className="mt-3 sm:mt-4 text-[#6B5F4B] text-sm sm:text-base max-w-xl leading-relaxed">
-          12+ years of turning houses into happy homes across Andhra Pradesh &amp; Telangana.
+        <p className="text-[#6B5F4B] text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          12+ years of designing, building, and delivering dream homes across Andhra Pradesh &amp; Telangana — with zero families left mid-project.
         </p>
       </section>
 
       {/* ── 1. FOUNDER SECTION ── */}
       <section
         suppressHydrationWarning
-        className="max-w-7xl mx-auto px-5 sm:px-8 py-10 sm:py-16 lg:py-20"
+        className="max-w-7xl mx-auto px-5 sm:px-8 py-10 sm:py-14 lg:py-16"
       >
-        {/* Two-column layout: photo left, copy right — vertically centered */}
-        <div className="flex flex-col lg:flex-row items-center gap-10 sm:gap-14 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
 
           {/* Founder Photo */}
-          <div className="w-full lg:w-2/5 flex-shrink-0">
-            <div className="relative w-full max-w-[320px] sm:max-w-md mx-auto lg:mx-0 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+          <div className="w-full lg:w-[38%] flex-shrink-0">
+            <div className="relative w-full max-w-[300px] sm:max-w-[380px] mx-auto lg:mx-0 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/services/founderimage.png"
-                alt="Founder of Happy Home Interiors — 12+ years of interior design experience"
+                alt="Tirupathi Rao — Founder of Happy Home Interiors, Visakhapatnam"
                 fill
                 className="object-cover object-top"
                 priority
-                sizes="(max-width: 768px) 85vw, (max-width: 1024px) 50vw, 40vw"
+                sizes="(max-width: 768px) 80vw, (max-width: 1024px) 45vw, 38vw"
               />
             </div>
           </div>
 
           {/* Founder Copy */}
-          <div className="flex-1 flex flex-col justify-center">
-            <SectionLabel centered={false}>The Person Behind Every Project</SectionLabel>
+          <div className="flex-1 flex flex-col justify-center text-center lg:text-left">
+            <SectionLabel centered={false} className="lg:text-left text-center">The Person Behind Every Project</SectionLabel>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.25rem] font-black text-[#0D0D0D] leading-[1.15] mb-5 sm:mb-8 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#0D0D0D] leading-[1.15] mb-4 sm:mb-5 tracking-tight">
               Your Home Deserves Someone Who&apos;s Done This <span className="text-[#EA580C]">5,000</span> Times.
             </h2>
 
-            <div className="space-y-4 sm:space-y-5 text-[#6B5F4B] text-[15px] sm:text-[17px] leading-relaxed">
+            <div className="space-y-3 sm:space-y-4 text-[#6B5F4B] text-[14px] sm:text-[16px] leading-relaxed">
               <p>
-                Happy Home Interiors was built on one belief: that every family in Andhra Pradesh and Telangana deserves a home they are genuinely proud of — not just one that &ldquo;looks okay.&rdquo; Over 12+ years, we have turned that belief into a proven system for modular kitchens, wardrobes, false ceilings, turnkey projects, and full home construction. Quality and durability are not a promise here — they are the only standard we know.
+                Happy Home Interiors was built on one belief: every family in Andhra Pradesh and Telangana deserves a home they&apos;re genuinely proud of. Over 12+ years, we&apos;ve turned that belief into a proven system for modular kitchens, wardrobes, false ceilings, turnkey projects, and full home construction.
               </p>
               <p>
-                Our team combines sharp aesthetic design with practical, hands-on execution. Every kitchen, every wardrobe, every ceiling is planned around how your family actually lives — not how it looks in a catalogue. From TV units to lighting concepts to space optimization, we engineer your home to work for you for decades, not just for the photoshoot.
+                Every kitchen, wardrobe, and ceiling is planned around how your family actually lives — not how it looks in a catalogue. We engineer your home to work for decades, not just for the photoshoot.
               </p>
               <p>
-                Beyond design, our work has earned recognition from the Rotary Club (End Polio Chair Member), BNI, and some of India&apos;s most respected building material brands. Not because we chased awards — but because 5,000+ families chose to tell other families about us.
+                Our work has earned recognition from the Rotary Club, BNI, and India&apos;s most respected building material brands — because 5,000+ families chose to tell other families about us.
               </p>
             </div>
 
-            <div className="mt-8 sm:mt-10">
+            <div className="mt-6 sm:mt-8 flex justify-center lg:justify-start">
               <AnimatedButton
                 text="See How We Work →"
                 href="/services"
@@ -118,7 +117,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── 2. AWARDS & RECOGNITION (from homepage) ── */}
+      {/* ── 2. AWARDS & RECOGNITION ── */}
       <AwardsSection />
 
       {/* ── 3. SERVICES SECTION ── */}
@@ -130,11 +129,11 @@ export default function AboutPage() {
         className="max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-24 text-center"
       >
         <SectionLabel>The People You&apos;ll Work With</SectionLabel>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#0D0D0D] mb-4 sm:mb-6 leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#0D0D0D] mb-3 sm:mb-4 leading-tight">
           Every Person on This Team Has Stood Inside Your <span className="text-[#EA580C]">Future</span> Home.
         </h2>
-        <p className="text-[#6B5F4B] text-sm sm:text-base lg:text-lg max-w-3xl mx-auto mb-10 sm:mb-14 leading-relaxed">
-          Our designers, site supervisors, and project managers do not just work from plans — they visit, they measure, they problem-solve on-site. This is the team that has delivered 5,000+ homes without a single family being left mid-project.
+        <p className="text-[#6B5F4B] text-sm sm:text-base lg:text-lg max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed">
+          Our designers, site supervisors, and project managers visit, measure, and problem-solve on-site. 5,000+ homes delivered — zero families left mid-project.
         </p>
 
         {/* Landscape Team Image */}
@@ -160,4 +159,3 @@ export default function AboutPage() {
     </main>
   );
 }
-
