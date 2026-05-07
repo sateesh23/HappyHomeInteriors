@@ -89,7 +89,7 @@ export default function AboutPage() {
 
           {/* Founder Copy */}
           <div className="flex-1 flex flex-col justify-center text-center lg:text-left">
-            <SectionLabel centered={false} className="lg:text-left text-center">The Person Behind Every Project</SectionLabel>
+            <SectionLabel>The Person Behind Every Project</SectionLabel>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#0D0D0D] leading-[1.15] mb-4 sm:mb-5 tracking-tight">
               Your Home Deserves Someone Who&apos;s Done This <span className="text-[#EA580C]">5,000</span> Times.
