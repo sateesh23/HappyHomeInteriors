@@ -60,14 +60,14 @@ export default function AboutPage() {
           <span className="text-[#EA580C]">Our Story</span>
         </div>
 
-        {/* Two-column layout: photo left, copy right */}
-        <div className="flex flex-col lg:flex-row items-start gap-16 lg:gap-24">
+        {/* Two-column layout: photo left, copy right — vertically centered */}
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 
           {/* Founder Photo — rectangular portrait, no circle */}
           <div className="w-full lg:w-2/5 flex-shrink-0">
             <div className="relative w-full max-w-md mx-auto lg:mx-0 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/founderimage.png"
+                src="/images/services/founderimage.png"
                 alt="Founder of Happy Home Interiors — 12+ years of interior design experience"
                 fill
                 className="object-cover object-top"
