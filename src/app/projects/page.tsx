@@ -30,7 +30,7 @@ const FALLBACK_PROJECTS: Project[] = [
     id: "f1",
     title: "Modern Executive Office",
     description: "Office · Visakhapatnam · Modern executive office with textured wall panels and ambient lighting.",
-    image_url: "/images/services/Full-Home-Turnkey.png",
+    image_url: "/images/services/full-home-turnkey-interior-vizag.png",
     project_type: "Office",
     is_featured: true, order_index: 1, created_at: "2024-01-01T00:00:00.000Z"
   },
@@ -38,7 +38,7 @@ const FALLBACK_PROJECTS: Project[] = [
     id: "f2",
     title: "Lavender Dream Bedroom",
     description: "Bedroom · MVP Colony · Contemporary bedroom in lilac with wardrobe wall and false ceiling design.",
-    image_url: "/images/services/Bedroom-Wardrobes.png",
+    image_url: "/images/services/bedroom-wardrobe-design-visakhapatnam.png",
     project_type: "Bedroom",
     is_featured: true, order_index: 2, created_at: "2024-01-01T00:00:00.000Z"
   },
@@ -46,7 +46,7 @@ const FALLBACK_PROJECTS: Project[] = [
     id: "f3",
     title: "Neutral Master Bedroom",
     description: "Bedroom · Madhurawada · Warm neutral bedroom with wooden wardrobe and cove ceiling lighting.",
-    image_url: "/images/services/False-Ceiling-Floorings.png",
+    image_url: "/images/services/false-ceiling-flooring-design-hyderabad.png",
     project_type: "Bedroom",
     is_featured: true, order_index: 3, created_at: "2024-01-01T00:00:00.000Z"
   },
@@ -54,7 +54,7 @@ const FALLBACK_PROJECTS: Project[] = [
     id: "f4",
     title: "Sky Blue Modular Kitchen",
     description: "Modular Kitchen · Steel Plant Area · L-shaped modular kitchen with sky blue acrylic shutters.",
-    image_url: "/images/services/Modular-Kitchen.png",
+    image_url: "/images/services/modular-kitchen-vizag-modern-design.png",
     project_type: "Modular Kitchen",
     is_featured: true, order_index: 4, created_at: "2024-01-01T00:00:00.000Z"
   },
@@ -62,7 +62,7 @@ const FALLBACK_PROJECTS: Project[] = [
     id: "f5",
     title: "Elegant Exterior Design",
     description: "Exterior · Seethammadhara · Modern exterior with premium textures and landscape lighting.",
-    image_url: "/images/services/Exterior-Design.png",
+    image_url: "/images/services/commercial-residential-construction-vizag.png",
     project_type: "Exterior",
     is_featured: true, order_index: 5, created_at: "2024-01-01T00:00:00.000Z"
   },
@@ -70,7 +70,7 @@ const FALLBACK_PROJECTS: Project[] = [
     id: "f6",
     title: "Waterproofing & Cooling",
     description: "Exterior · KRM Colony · Complete waterproofing and heat reduction solution.",
-    image_url: "/images/services/Waterproof-Roof-Cooling.png",
+    image_url: "/images/services/waterproof-roof-cooling-services-andhra-pradesh.png",
     project_type: "Exterior",
     is_featured: true, order_index: 6, created_at: "2024-01-01T00:00:00.000Z"
   }

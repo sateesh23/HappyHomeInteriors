@@ -36,7 +36,7 @@ export const SERVICES_DATA: ServiceData[] = [
       "A modular kitchen is the heart of your home, and we treat it that way. Happy Home Interiors designs fully customized kitchens built around your cooking habits, space dimensions, and aesthetic preferences.\n\nOur designer incorporates your requirements through detailed discussions. Every kitchen is manufactured in our own facility with premium materials and installed on-site with precision.\n\nFrom compact straight kitchens for apartments to large U-shaped island kitchens for villas — we deliver quality that lasts for decades.",
     ctaText: 'Customize My Kitchen',
     priceFrom: '₹1,500/sq.ft',
-    image: '/images/services/Modular-Kitchen.png',
+    image: '/images/services/modular-kitchen-vizag-modern-design.png',
     imageAlt: 'Modular kitchen by Happy Home Interiors',
     subServices: [
       { icon: 'LayoutGrid', title: 'Island Kitchen', description: 'Kitchens designed for those who love dining while cooking. Family feels secure and free in this zone.' },
@@ -56,7 +56,7 @@ export const SERVICES_DATA: ServiceData[] = [
       "Transform the look and feel of any room with expertly designed false ceilings. From minimal gypsum boards to elaborate POP designs with cove lighting — we handle the full scope.\n\nOur ceiling work conceals AC ducts, electrical wiring, and plumbing while adding elegance and warmth through ambient LED integration.\n\nWe also provide premium flooring solutions — vitrified tiles, marble, wooden laminate, and anti-skid options for every room type.",
     ctaText: 'Design My Ceiling',
     priceFrom: '₹85/sq.ft',
-    image: '/images/services/False-Ceiling-Floorings.png',
+    image: '/images/services/false-ceiling-flooring-design-hyderabad.png',
     imageAlt: 'False ceiling and flooring by Happy Home Interiors',
     subServices: [
       { icon: 'Square', title: 'Gypsum False Ceiling', description: 'Lightweight, fire-resistant gypsum boards — ideal for all rooms. Clean finish with smooth painting.' },
@@ -76,7 +76,7 @@ export const SERVICES_DATA: ServiceData[] = [
       "A large portion of anyone's life is spent in their bedroom, so it deserves the best ambience, facilities, and thoughtful design. We create bedrooms that feel like personal sanctuaries.\n\nFrom full wardrobe walls to dressing units, study corners, and headboard panels — every element is custom-built to your exact dimensions and lifestyle.\n\n12 years of bedroom design across 5000+ homes gives us an unmatched understanding of what works in Indian homes.",
     ctaText: 'Build My Dream Bedroom',
     priceFrom: '₹1,200/sq.ft',
-    image: '/images/services/Bedroom-Wardrobes.png',
+    image: '/images/services/bedroom-wardrobe-design-visakhapatnam.png',
     imageAlt: 'Bedroom and wardrobe design by Happy Home Interiors',
     subServices: [
       { icon: 'BedDouble', title: 'Premium Beds & Headboards', description: 'Custom beds with upholstered headboards, storage drawers beneath, and side table integration.' },
@@ -96,7 +96,7 @@ export const SERVICES_DATA: ServiceData[] = [
       "Our most comprehensive offering — we take over your entire home from bare walls to final handover. One team. One timeline. Zero coordination stress.\n\nThis covers every room: modular kitchen, all bedrooms with wardrobes, living and dining, false ceilings throughout, flooring, painting, electrical work, and all furniture.\n\nTrusted by 5000+ families across AP and Telangana for delivering complete homes on time and within the agreed budget — no hidden surprises.",
     ctaText: 'Get Full Home Quote',
     priceFrom: '₹1,800/sq.ft',
-    image: '/images/services/Full-Home-Turnkey.png',
+    image: '/images/services/full-home-turnkey-interior-vizag.png',
     imageAlt: 'Full home turnkey interior by Happy Home Interiors',
     subServices: [
       { icon: 'Sofa', title: 'Living Room Design', description: 'TV unit, sofa backdrop wall, false ceiling, and complete furniture curation for your living space.' },
@@ -116,7 +116,7 @@ export const SERVICES_DATA: ServiceData[] = [
       "Protect your home from monsoon leaks, seepage, and summer heat with our advanced roof treatment solutions. We use proven waterproofing systems that last for years.\n\nOur thermal cool-roof coatings reduce indoor temperatures by up to 5–8°C — cutting your AC bills significantly while keeping your home comfortable year round.\n\nAvailable for terraces, flat roofs, sloped roofs, and bathroom ceilings across all property types.",
     ctaText: 'Protect My Home',
     priceFrom: '₹45/sq.ft',
-    image: '/images/services/Waterproof-Roof-Cooling.png',
+    image: '/images/services/waterproof-roof-cooling-services-andhra-pradesh.png',
     imageAlt: 'Waterproof roof and cooling by Happy Home Interiors',
     subServices: [
       { icon: 'CloudRain', title: 'Terrace Waterproofing', description: 'Complete terrace waterproofing with membrane application — prevents leakage into rooms below.' },
@@ -136,7 +136,7 @@ export const SERVICES_DATA: ServiceData[] = [
       "Make Your Home the One Everyone Stops to Look At\n\nFirst impressions are permanent. We design bold, elegant exteriors — facades, elevation finishes, and landscaping touches — that give your home a personality the entire neighborhood remembers.\n\nFrom independent houses and villa construction to commercial complexes and apartment buildings — Happy Home Interiors manages the full build cycle. Site supervision, material procurement, civil execution, and final handover — all under one accountable team across Andhra Pradesh and Telangana.",
     ctaText: 'Start My Construction',
     priceFrom: '₹1,600/sq.ft',
-    image: '/images/services/Exterior-Design.png',
+    image: '/images/services/commercial-residential-construction-vizag.png',
     imageAlt: 'Commercial and residential construction by Happy Home Interiors',
     subServices: [
       { icon: 'Building2', title: 'Facade & Elevation Design', description: 'Bold, elegant facade designs that give your home a personality the entire neighbourhood remembers.' },

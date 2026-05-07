@@ -149,7 +149,7 @@ export const PROJECTS: Project[] = [
     title: "The Founder's Office — Lucknow",
     project_type: "Office",
     description: "Modern Executive Office",
-    image_url: "/images/services/Full-Home-Turnkey.png",
+    image_url: "/images/services/full-home-turnkey-interior-vizag.png",
     is_featured: true,
     order_index: 1,
     created_at: "2024-01-01T00:00:00.000Z"
@@ -159,7 +159,7 @@ export const PROJECTS: Project[] = [
     title: "Where the Family Gathers — Indore",
     project_type: "Living Room",
     description: "Luxury Living Room",
-    image_url: "/images/services/Bedroom-Wardrobes.png",
+    image_url: "/images/services/bedroom-wardrobe-design-visakhapatnam.png",
     is_featured: true,
     order_index: 2,
     created_at: "2024-01-01T00:00:00.000Z"
@@ -169,7 +169,7 @@ export const PROJECTS: Project[] = [
     title: "Bedroom That Feels Like a Boutique Hotel",
     project_type: "Bedroom",
     description: "Modern Bedroom",
-    image_url: "/images/services/False-Ceiling-Floorings.png",
+    image_url: "/images/services/false-ceiling-flooring-design-hyderabad.png",
     is_featured: true,
     order_index: 3,
     created_at: "2024-01-01T00:00:00.000Z"
@@ -179,7 +179,7 @@ export const PROJECTS: Project[] = [
     title: "A Kitchen Built for the Indian Cook",
     project_type: "Modular Kitchen",
     description: "Sky Modular Kitchen",
-    image_url: "/images/services/Modular-Kitchen.png",
+    image_url: "/images/services/modular-kitchen-vizag-modern-design.png",
     is_featured: true,
     order_index: 4,
     created_at: "2024-01-01T00:00:00.000Z"
@@ -189,7 +189,7 @@ export const PROJECTS: Project[] = [
     title: "The Farmhouse That Became Their Forever Home",
     project_type: "Exterior",
     description: "Elegant Farm House",
-    image_url: "/images/services/Exterior-Design.png",
+    image_url: "/images/services/commercial-residential-construction-vizag.png",
     is_featured: true,
     order_index: 5,
     created_at: "2024-01-01T00:00:00.000Z"
@@ -199,7 +199,7 @@ export const PROJECTS: Project[] = [
     title: "Ceilings That Changed the Entire Room's Mood",
     project_type: "Ceiling",
     description: "Minimal Ceiling Design",
-    image_url: "/images/services/Waterproof-Roof-Cooling.png",
+    image_url: "/images/services/waterproof-roof-cooling-services-andhra-pradesh.png",
     is_featured: true,
     order_index: 6,
     created_at: "2024-01-01T00:00:00.000Z"
