@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Target } from "lucide-react";
 import { BUSINESS_DETAILS } from "@/constants/content";
 import { AnimatedButton } from "@/components/ui/AnimatedButton";
 import SectionLabel from "@/components/ui/SectionLabel";
@@ -111,92 +110,6 @@ export default function AboutPage() {
       {/* ── 2. AWARDS & RECOGNITION (from homepage) ── */}
       <AwardsSection />
 
-      {/* ── 3. PROVEN TRACK RECORD ── */}
-      <section className="max-w-7xl mx-auto px-5 sm:px-8 py-20 lg:py-32 flex flex-col lg:flex-row items-center gap-16">
-        <div className="flex-1 w-full">
-          <SectionLabel centered={false}>Our Experience &amp; Projects</SectionLabel>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0D0D0D] mb-8 leading-tight">
-            We&apos;ve <span className="text-[#EA580C]">Solved</span> the Problems You Haven&apos;t Run Into Yet.
-          </h2>
-          <p className="text-[#6B5F4B] text-lg leading-relaxed mb-10">
-            From compact 2BHK apartments in Vizag to sprawling villas across AP and Telangana — we have navigated every layout challenge, budget constraint, and site condition imaginable. That depth of field experience means your project gets solved faster, smarter, and with far fewer surprises.
-          </p>
-
-          <div className="space-y-8">
-            <div className="flex items-start gap-5">
-              <div className="w-12 h-12 rounded-2xl bg-[#EA580C]/10 flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-6 h-6 text-[#EA580C]" />
-              </div>
-              <div>
-                <h4 className="font-black text-[#0D0D0D] text-xl mb-1">
-                  We Come to You Across AP &amp; Telangana
-                </h4>
-                <p className="text-[#6B5F4B] leading-relaxed">
-                  Whether you are in Visakhapatnam, Hyderabad, Vijayawada, or anywhere across the two states — our team executes on-site with the same precision as our home base. No outsourcing, no quality compromise at a distance.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-5">
-              <div className="w-12 h-12 rounded-2xl bg-[#EA580C]/10 flex items-center justify-center flex-shrink-0">
-                <Target className="w-6 h-6 text-[#EA580C]" />
-              </div>
-              <div>
-                <h4 className="font-black text-[#0D0D0D] text-xl mb-1">
-                  One Goal: A Home You Never Want to Leave
-                </h4>
-                <p className="text-[#6B5F4B] leading-relaxed">
-                  Every material we choose, every joint we finish, every detail we add — is aimed at one outcome: a home that looks better in three years than it did on day one. That is the standard 5,000+ families have held us to. And we have never missed it.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Image collage */}
-        <div className="flex-1 grid grid-cols-2 gap-4">
-          <div className="space-y-4">
-            <div className="aspect-[4/5] relative rounded-2xl overflow-hidden shadow-lg">
-              <Image
-                src="/images/services/Modular-Kitchen.png"
-                alt="Modular kitchen project"
-                fill
-                className="object-cover"
-                sizes="25vw"
-              />
-            </div>
-            <div className="aspect-square relative rounded-2xl overflow-hidden shadow-lg">
-              <Image
-                src="/images/services/Bedroom-Wardrobes.png"
-                alt="Bedroom and wardrobe design"
-                fill
-                className="object-cover"
-                sizes="25vw"
-              />
-            </div>
-          </div>
-          <div className="space-y-4 pt-8">
-            <div className="aspect-square relative rounded-2xl overflow-hidden shadow-lg">
-              <Image
-                src="/images/services/Full-Home-Turnkey.png"
-                alt="Full home turnkey project"
-                fill
-                className="object-cover"
-                sizes="25vw"
-              />
-            </div>
-            <div className="aspect-[4/5] relative rounded-2xl overflow-hidden shadow-lg">
-              <Image
-                src="/images/services/False-Ceiling-Floorings.png"
-                alt="False ceiling design"
-                fill
-                className="object-cover"
-                sizes="25vw"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── 4. SERVICES SECTION ── */}
       <ServicesGrid />
