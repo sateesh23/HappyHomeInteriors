@@ -1,19 +1,29 @@
 "use server";
 
+import { getSupabaseClient } from "@/lib/supabase";
+
 export async function submitLead(formData: FormData) {
-  const name = formData.get("name");
-  const phone = formData.get("phone");
-  const project = formData.get("project");
+  const name = formData.get("name") as string;
+  const phone = formData.get("phone") as string;
+  const project = formData.get("project") as string;
 
   if (!name || !phone || !project) {
     return { success: false, message: "All fields are required." };
   }
 
-  // Simulate storing lead in DB / Google Sheets
-  console.log("New Lead Received:", { name, phone, project });
-
-  // Simulate network delay
-  await new Promise((resolve) => setTimeout(resolve, 800));
+  const supabase = getSupabaseClient();
+  if (supabase) {
+    try {
+      await supabase.from("enquiries").insert([{
+        name,
+        phone,
+        project_type: project,
+        status: "new",
+      }]);
+    } catch {
+      // Silently continue — lead is still acknowledged to the user
+    }
+  }
 
   return { success: true, message: "Thanks! We'll get back to you in 24 hours." };
 }
