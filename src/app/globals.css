@@ -34,7 +34,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior is handled via data-scroll-behavior="smooth" on <html> in layout.tsx */
 }
 
 body {

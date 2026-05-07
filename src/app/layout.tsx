@@ -279,11 +279,15 @@ export default function RootLayout({
     <html
       lang="en-IN"
       className={`${inter.variable} font-sans`}
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <head suppressHydrationWarning>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://lwwvdtzkkhwmjvaahrsn.supabase.co" />
+        <link rel="dns-prefetch" href="https://img.youtube.com" />
+        <link rel="dns-prefetch" href="https://www.youtube.com" />
         <meta name="theme-color" content="#EA580C" />
         <link rel="apple-touch-icon" href="/icon.jpg" />
         <link rel="shortcut icon" href="/icon.jpg" type="image/jpeg" />
@@ -308,7 +312,8 @@ export default function RootLayout({
         <ScrollObserver />
         <LeadModal />
         <ServicePopup />
-        <GoogleAnalytics gaId="G-XXXXXXXXXX" />
+        {/* Google Analytics — replace G-XXXXXXXXXX with your real GA4 Measurement ID */}
+        {/* <GoogleAnalytics gaId="G-XXXXXXXXXX" /> */}
       </body>
     </html>
   );
