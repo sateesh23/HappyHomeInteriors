@@ -69,12 +69,13 @@ export default function AboutPage() {
       {/* ── 1. FOUNDER SECTION ── */}
       <section
         suppressHydrationWarning
+        aria-label="About the founder"
         className="max-w-7xl mx-auto px-5 sm:px-8 py-10 sm:py-14 lg:py-16"
       >
         <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
 
           {/* Founder Photo */}
-          <div className="w-full lg:w-[38%] flex-shrink-0">
+          <figure className="w-full lg:w-[38%] flex-shrink-0 m-0">
             <div className="relative w-full max-w-[300px] sm:max-w-[380px] mx-auto lg:mx-0 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/services/founderimage.png"
@@ -85,7 +86,8 @@ export default function AboutPage() {
                 sizes="(max-width: 768px) 80vw, (max-width: 1024px) 45vw, 38vw"
               />
             </div>
-          </div>
+            <figcaption className="sr-only">Tirupathi Rao, Founder of Happy Home Interiors</figcaption>
+          </figure>
 
           {/* Founder Copy */}
           <div className="flex-1 flex flex-col justify-center text-center lg:text-left">
@@ -126,6 +128,7 @@ export default function AboutPage() {
       {/* ── 4. MEET THE TEAM ── */}
       <section
         suppressHydrationWarning
+        aria-label="Meet the team"
         className="max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-24 text-center"
       >
         <SectionLabel>The People You&apos;ll Work With</SectionLabel>

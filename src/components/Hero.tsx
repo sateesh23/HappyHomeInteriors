@@ -11,8 +11,8 @@ interface HeroProps {
 
 export default function Hero({ location = "Visakhapatnam" }: HeroProps) {
   return (
-    <div suppressHydrationWarning className="w-full h-screen bg-white p-[10px]">
-      <section className="relative w-full h-full rounded-3xl overflow-hidden bg-[#1A1A1A]">
+    <section aria-label="Hero banner — Interior Designers in Visakhapatnam" className="w-full h-screen bg-white p-[10px]">
+      <div className="relative w-full h-full rounded-3xl overflow-hidden bg-[#1A1A1A]">
 
         {/* Background Image */}
         <div className="absolute inset-0">
@@ -23,8 +23,8 @@ export default function Hero({ location = "Visakhapatnam" }: HeroProps) {
             priority
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" aria-hidden="true" />
         </div>
 
         {/* Content — bottom-left anchored */}
@@ -79,7 +79,7 @@ export default function Hero({ location = "Visakhapatnam" }: HeroProps) {
           </div>
         </div>
 
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

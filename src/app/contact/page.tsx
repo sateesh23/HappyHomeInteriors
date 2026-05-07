@@ -78,7 +78,7 @@ export default function ContactPage() {
     <main className="min-h-screen bg-white pt-24 sm:pt-28 pb-0">
 
       {/* ── SECTION 1: Hero — Contact Info + Form Split ─── */}
-      <section className="max-w-7xl mx-auto px-5 sm:px-8 py-10 sm:py-16 lg:py-20">
+      <section aria-label="Contact information and consultation form" className="max-w-7xl mx-auto px-5 sm:px-8 py-10 sm:py-16 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
           {/* LEFT COLUMN — Contact Information */}
@@ -94,30 +94,31 @@ export default function ContactPage() {
             </p>
 
             {/* Direct contact links */}
-            <div className="space-y-4 mb-10">
+            <address className="not-italic space-y-4 mb-10">
               <a
                 href={`mailto:${BUSINESS_DETAILS.email}`}
-                className="flex items-center gap-3 text-[#0D0D0D] hover:text-[#EA580C] transition-colors group"
+                className="flex items-center gap-3 text-[#0D0D0D] hover:text-[#EA580C] transition-colors group cursor-pointer"
               >
-                <Mail className="w-4 h-4 text-[#EA580C]" />
+                <Mail className="w-4 h-4 text-[#EA580C]" aria-hidden="true" />
                 <span className="text-sm font-medium">{BUSINESS_DETAILS.email}</span>
               </a>
               <a
                 href={`tel:${BUSINESS_DETAILS.phone}`}
                 className="flex items-center gap-3 text-[#0D0D0D] hover:text-[#EA580C] transition-colors group"
               >
-                <Phone className="w-4 h-4 text-[#EA580C]" />
+                <Phone className="w-4 h-4 text-[#EA580C]" aria-hidden="true" />
                 <span className="text-sm font-medium">{BUSINESS_DETAILS.phone}</span>
               </a>
-              <a
-                href={`https://wa.me/${BUSINESS_DETAILS.whatsapp}?text=Hi, I'd like a free consultation for my home interiors.`}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-[#EA580C] text-sm font-bold hover:underline mt-1"
-              >
-                Chat on WhatsApp <ArrowRight className="w-3.5 h-3.5" />
-              </a>
-            </div>
+            </address>
+            <a
+              href={`https://wa.me/${BUSINESS_DETAILS.whatsapp}?text=Hi, I'd like a free consultation for my home interiors.`}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 text-[#EA580C] text-sm font-bold hover:underline mt-1 cursor-pointer"
+              aria-label="Chat with us on WhatsApp"
+            >
+              Chat on WhatsApp <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+            </a>
 
             {/* Support cards — 3 across */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

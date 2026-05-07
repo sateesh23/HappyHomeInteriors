@@ -5,7 +5,7 @@ import { openLeadModal } from "./LeadModal";
 
 export default function CTABanner() {
   return (
-    <section suppressHydrationWarning className="w-full px-4 sm:px-6 lg:px-8 py-10 md:py-14 bg-white">
+    <section aria-label="Call to action — Book a free consultation" suppressHydrationWarning className="w-full px-4 sm:px-6 lg:px-8 py-10 md:py-14 bg-white">
       {/* Compact orange card */}
       <div
         suppressHydrationWarning
@@ -15,6 +15,7 @@ export default function CTABanner() {
         {/* Subtle top-right glow */}
         <div
           className="absolute -top-20 -right-20 w-64 h-64 rounded-full pointer-events-none"
+          aria-hidden="true"
           style={{ background: "radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%)" }}
         />
 
@@ -40,13 +41,15 @@ export default function CTABanner() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
             <button
               onClick={() => openLeadModal()}
-              className="inline-flex items-center justify-center px-8 py-3 rounded-xl bg-white text-[#EA580C] font-black text-[14px] hover:bg-orange-50 active:scale-95 transition-all duration-200 shadow-lg shadow-black/15 whitespace-nowrap"
+              className="inline-flex items-center justify-center px-8 py-3 rounded-xl bg-white text-[#EA580C] font-black text-[14px] hover:bg-orange-50 active:scale-95 transition-all duration-200 shadow-lg shadow-black/15 whitespace-nowrap cursor-pointer focus-visible:ring-2 focus-visible:ring-white"
+              aria-label="Book a free design consultation"
             >
               Book Free Consultation
             </button>
             <button
               onClick={() => openLeadModal()}
-              className="inline-flex items-center justify-center px-8 py-3 rounded-xl border-2 border-white/35 text-white font-bold text-[14px] hover:bg-white/10 active:scale-95 transition-all duration-200 whitespace-nowrap"
+              className="inline-flex items-center justify-center px-8 py-3 rounded-xl border-2 border-white/35 text-white font-bold text-[14px] hover:bg-white/10 active:scale-95 transition-all duration-200 whitespace-nowrap cursor-pointer focus-visible:ring-2 focus-visible:ring-white"
+              aria-label="Get a price quote for your project"
             >
               Get a Quote →
             </button>

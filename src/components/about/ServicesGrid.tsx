@@ -25,7 +25,7 @@ const SERVICES = [
 
 export default function ServicesGrid() {
   return (
-    <section className="bg-white py-16 sm:py-24 border-t border-gray-100">
+    <section aria-label="Our interior design services" className="bg-white py-16 sm:py-24 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         {/* Section Header */}
         <div className="text-center mb-10 sm:mb-14">
@@ -43,7 +43,7 @@ export default function ServicesGrid() {
         {/* 8-card grid */}
         <div className="grid grid-cols-1 min-[400px]:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {SERVICES.map(({ number, label, sub, Icon }) => (
-            <div
+            <article
               key={number}
               className="
                 group relative bg-white border border-gray-100 rounded-2xl p-5 sm:p-7
@@ -54,7 +54,7 @@ export default function ServicesGrid() {
               "
             >
               {/* Orange top accent bar — slides in on hover */}
-              <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#C2410C] to-[#FB923C] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out rounded-t-2xl" />
+              <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#C2410C] to-[#FB923C] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out rounded-t-2xl" aria-hidden="true" />
 
               {/* Number */}
               <span className="text-[11px] font-black tracking-widest text-[#EA580C]/40 uppercase group-hover:text-[#EA580C]/80 transition-colors duration-300 self-start">
@@ -64,7 +64,7 @@ export default function ServicesGrid() {
               {/* Icon — centered */}
               <div className="flex justify-center">
                 <div className="w-14 h-14 rounded-2xl bg-[#EA580C]/8 group-hover:bg-[#EA580C]/12 flex items-center justify-center transition-colors duration-300">
-                  <Icon className="w-7 h-7 text-[#EA580C] group-hover:scale-110 transition-transform duration-300" />
+                  <Icon className="w-7 h-7 text-[#EA580C] group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
                 </div>
               </div>
 
@@ -82,7 +82,7 @@ export default function ServicesGrid() {
               <div className="flex items-center justify-center gap-1 text-[#EA580C] font-bold text-sm opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out">
                 Learn more <span>→</span>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
@@ -90,7 +90,8 @@ export default function ServicesGrid() {
         <div className="text-center mt-14">
           <button
             onClick={() => openLeadModal()}
-            className="inline-flex items-center justify-center px-8 sm:px-12 py-3.5 sm:py-4 rounded-2xl bg-[#EA580C] text-white font-black text-[14px] sm:text-[16px] hover:bg-[#C2410C] active:scale-95 transition-all duration-200 shadow-lg shadow-[#EA580C]/25 whitespace-nowrap w-full sm:w-auto"
+            className="inline-flex items-center justify-center px-8 sm:px-12 py-3.5 sm:py-4 rounded-2xl bg-[#EA580C] text-white font-black text-[14px] sm:text-[16px] hover:bg-[#C2410C] active:scale-95 transition-all duration-200 shadow-lg shadow-[#EA580C]/25 whitespace-nowrap w-full sm:w-auto cursor-pointer focus-visible:ring-2 focus-visible:ring-[#EA580C] focus-visible:ring-offset-2"
+            aria-label="Get a free design consultation"
           >
             Get Your Free Design Consultation →
           </button>

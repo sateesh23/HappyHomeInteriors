@@ -1,4 +1,6 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
+
+const BASE_URL = "https://happyhomeinteriors.in";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,9 +8,46 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/admin", "/api/"],
+        disallow: ["/admin/", "/api/"],
+      },
+      // Explicitly allow AI crawlers (Google 2026 Agent-Friendly guidelines)
+      {
+        userAgent: "Googlebot",
+        allow: "/",
+      },
+      {
+        userAgent: "Googlebot-Extended",
+        allow: "/",
+      },
+      {
+        userAgent: "Google-Extended",
+        allow: "/",
+      },
+      {
+        userAgent: "GPTBot",
+        allow: "/",
+      },
+      {
+        userAgent: "ChatGPT-User",
+        allow: "/",
+      },
+      {
+        userAgent: "Claude-Web",
+        allow: "/",
+      },
+      {
+        userAgent: "anthropic-ai",
+        allow: "/",
+      },
+      {
+        userAgent: "PerplexityBot",
+        allow: "/",
+      },
+      {
+        userAgent: "Bingbot",
+        allow: "/",
       },
     ],
-    sitemap: "https://happyhomeinteriors.in/sitemap.xml",
+    sitemap: `${BASE_URL}/sitemap.xml`,
   };
 }
