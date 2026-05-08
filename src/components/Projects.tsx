@@ -64,10 +64,15 @@ export default function ProjectsGrid({ projects }: Props) {
               const uiLocation = (project as any).location || "Visakhapatnam";
               const uiCategory = (project as any).project_type || "Interior Design";
 
+              const youtubeUrl = (project as any).youtube_url;
+              const Wrapper = youtubeUrl ? "a" : "div";
+              const wrapperProps = youtubeUrl ? { href: youtubeUrl, target: "_blank", rel: "noopener noreferrer" } : {};
+
               return (
-                <div
+                <Wrapper
                   key={project.id}
-                  className="group cursor-pointer"
+                  className="group cursor-pointer block"
+                  {...wrapperProps}
                 >
                    {/* Uniform Image block for both image and video */}
                    <div suppressHydrationWarning className="rounded-[4px] overflow-hidden relative w-full aspect-[4/5] bg-gray-100 group">
@@ -115,7 +120,7 @@ export default function ProjectsGrid({ projects }: Props) {
                          </p>
                       </div>
                    </div>
-                </div>
+                </Wrapper>
               );
             })}
           </div>
