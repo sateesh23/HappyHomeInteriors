@@ -30,6 +30,10 @@ const CTABanner = dynamic(() => import("@/components/CTASection"), {
   ssr: true,
 });
 
+const MaterialBrands = dynamic(() => import("@/components/MaterialBrands"), {
+  ssr: true,
+});
+
 const GoogleReviewsMarquee = dynamic(() => import("@/components/GoogleReviewsMarquee"), {
   ssr: true,
 });
@@ -215,6 +219,9 @@ export default async function HomePage() {
 
       {/* SECTION 6 — Why Choose Us */}
       <WhyChooseUs />
+
+      {/* SECTION 6.5 — Material Brands Trust */}
+      <MaterialBrands />
 
       {/* SECTION 7 — Final CTA */}
       <CTABanner />

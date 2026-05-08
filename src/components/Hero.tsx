@@ -44,7 +44,7 @@ export default function Hero({ location = "Visakhapatnam" }: HeroProps) {
           {/* Headline */}
           <h1 className="text-[2rem] min-[375px]:text-[2.2rem] sm:text-[3rem] lg:text-[3.75rem] font-black text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-5 tracking-tight w-full flex flex-col">
             <span className="text-xs sm:text-sm lg:text-base font-bold text-[#EA580C] uppercase tracking-[0.15em] mb-1 sm:mb-2 opacity-90">
-              Interior Designers in {location}
+              Best Interior Designers in {location}
             </span>
             <div className="flex flex-wrap items-baseline gap-x-2 sm:gap-x-3">
               <span>Your</span>
@@ -58,7 +58,7 @@ export default function Hero({ location = "Visakhapatnam" }: HeroProps) {
 
           {/* Subtext */}
           <p className="text-white/80 text-[14px] sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-[95%] sm:max-w-lg font-medium">
-            From modular kitchens to full home turnkey projects — we&apos;ve transformed 5,000+ homes across India with award-winning design and zero compromise on quality.
+            We design modular kitchens, living rooms, bedrooms, false ceilings, and full home interiors across {location}, Andhra Pradesh with end-to-end execution, on-time delivery, and transparent pricing.
           </p>
 
           {/* CTA Buttons */}
