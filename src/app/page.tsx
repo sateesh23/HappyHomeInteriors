@@ -173,7 +173,7 @@ async function getPageData() {
     try {
       const fetchPromise = supabase.from("projects").select("*").eq("is_featured", true).order("order_index").limit(6);
       // Timeout after 1.5s so development or cold-starts don't block render
-      const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error("Supabase Timeout")), 1500));
+      const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error("Supabase Timeout")), 5000));
       
       const prjRes = await Promise.race([fetchPromise, timeoutPromise]) as any;
 
