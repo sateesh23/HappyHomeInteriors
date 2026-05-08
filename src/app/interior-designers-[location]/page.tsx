@@ -110,13 +110,12 @@ export default async function LocationPage({ params }: { params: Promise<{ locat
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "InteriorDesigner",
+    "@type": "LocalBusiness",
     "name": "Happy Home Interiors",
     "image": `${BASE_URL}/og-image.jpg`,
     "url": `${BASE_URL}/interior-designers-${locId}`,
     "telephone": "+919177699570",
     "address": { "@type": "PostalAddress", "addressLocality": loc.name, "addressRegion": loc.state, "addressCountry": "IN" },
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "5000" },
   };
 
   const faqSchema = loc.faqs.length > 0 ? {

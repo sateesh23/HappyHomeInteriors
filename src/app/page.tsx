@@ -94,7 +94,6 @@ const localBusinessSchema = {
   },
   "areaServed": ["Visakhapatnam","Vijayawada","Guntur","Tirupati","Hyderabad","Secunderabad","Warangal","Chennai"],
   "priceRange": "₹₹",
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "5000" },
   "foundingDate": "2012",
   "founder": { "@type": "Person", "name": "Tirupathi Rao" },
 };
@@ -126,14 +125,7 @@ const faqSchema = {
   ],
 };
 
-const reviewSchema = {
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": { "@type": "LocalBusiness", "name": "Happy Home Interiors" },
-  "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-  "author": { "@type": "Person", "name": "Sunitha Lavanya" },
-  "reviewBody": "Switching to Happy Home Interiors was a game-changer. The process was seamless and the execution was noticeably faster and more efficient than we ever imagined.",
-};
+
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -236,7 +228,6 @@ export default async function HomePage() {
       {/* JSON-LD Structured Data — invisible to visitors, read by Google */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
     </>
   );

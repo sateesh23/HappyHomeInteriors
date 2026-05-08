@@ -79,32 +79,15 @@ export function articleSchema(title: string, description: string, image: string,
 }
 
 // ── Review Schema Generator ──
-export function reviewSchema(reviews: { author: string; rating: number; text: string; date: string }[]) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Happy Home Interiors",
-    "@id": `${BASE_URL}/#organization`,
-    "review": reviews.map((r) => ({
-      "@type": "Review",
-      "author": { "@type": "Person", "name": r.author },
-      "reviewRating": { "@type": "Rating", "ratingValue": r.rating, "bestRating": 5 },
-      "reviewBody": r.text,
-      "datePublished": r.date,
-    })),
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": reviews.length.toString(),
-    },
-  };
-}
+// NOTE: Removed aggregateRating from standalone schemas.
+// Google only supports aggregateRating on LocalBusiness when reviews are real and verifiable.
+// The global LocalBusiness schema in layout.tsx is the single source of truth.
 
 // ── Local Business Schema Generator ──
 export function localBusinessSchema(city: string, state: string, slug: string) {
   return {
     "@context": "https://schema.org",
-    "@type": ["InteriorDesigner", "ProfessionalService"],
+    "@type": "LocalBusiness",
     "name": "Happy Home Interiors",
     "image": `${BASE_URL}/og-image.jpg`,
     "url": `${BASE_URL}/${slug}`,
@@ -118,7 +101,6 @@ export function localBusinessSchema(city: string, state: string, slug: string) {
     },
     "geo": { "@type": "GeoCoordinates", "latitude": "17.7231", "longitude": "83.3012" },
     "priceRange": "₹₹",
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "5000" },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],

@@ -128,7 +128,7 @@ const websiteSchema = {
 // ── Organization Schema → enables Knowledge Panel in Google ──
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": ["Organization", "LocalBusiness", "InteriorDesigner"],
+  "@type": "Organization",
   "@id": `${BASE_URL}/#organization`,
   "name": "Happy Home Interiors",
   "legalName": "Happy Home Interiors",
@@ -151,6 +151,41 @@ const organizationSchema = {
     "jobTitle": "Founder & Principal Interior Designer",
   },
   "numberOfEmployees": { "@type": "QuantitativeValue", "value": "20" },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Akkayapalem",
+    "addressLocality": "Visakhapatnam",
+    "addressRegion": "Andhra Pradesh",
+    "postalCode": "530016",
+    "addressCountry": "IN",
+  },
+  "knowsAbout": [
+    "Interior Design",
+    "Modular Kitchen",
+    "Home Construction",
+    "Turnkey Projects",
+    "False Ceiling",
+    "Wardrobe Design",
+    "Space Planning",
+    "Waterproofing",
+  ],
+  "sameAs": [
+    "https://www.instagram.com/happyhomeinteriors",
+    "https://www.facebook.com/happyhomeinteriors",
+    "https://www.youtube.com/@happyhomeinteriors",
+  ],
+};
+
+// ── LocalBusiness Schema (separate from Organization for valid aggregateRating) ──
+const localBusinessSchemaGlobal = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": `${BASE_URL}/#localbusiness`,
+  "name": "Happy Home Interiors",
+  "url": BASE_URL,
+  "telephone": "+919177699570",
+  "email": "happyhomeinteriorsvizag@gmail.com",
+  "image": `${BASE_URL}/og-image.jpg`,
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Akkayapalem",
@@ -193,32 +228,10 @@ const organizationSchema = {
     ],
   },
   "priceRange": "₹₹",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "bestRating": "5",
-    "worstRating": "1",
-    "reviewCount": "5000",
-  },
   "award": [
     "Asian Paints Gold Contractor",
     "Ultratech Authorized Contractor",
     "Mapei Authorized Applicator",
-  ],
-  "knowsAbout": [
-    "Interior Design",
-    "Modular Kitchen",
-    "Home Construction",
-    "Turnkey Projects",
-    "False Ceiling",
-    "Wardrobe Design",
-    "Space Planning",
-    "Waterproofing",
-  ],
-  "sameAs": [
-    "https://www.instagram.com/happyhomeinteriors",
-    "https://www.facebook.com/happyhomeinteriors",
-    "https://www.youtube.com/@happyhomeinteriors",
   ],
 };
 
@@ -299,6 +312,7 @@ export default function RootLayout({
         {/* WebSite + Organization + Sitelinks JSON-LD */}
         <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
         <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+        <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchemaGlobal) }} />
         <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(sitelinksSchema) }} />
 
         {/* Strip browser-extension bis_skin_checked attributes before React hydration */}
