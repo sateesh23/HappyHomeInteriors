@@ -8,7 +8,7 @@ import AwardsSection from "@/components/AwardsSection";
 import CTABanner from "@/components/CTASection";
 import ServicesGrid from "@/components/about/ServicesGrid";
 
-const BASE_URL = "https://happyhomeinteriors.in";
+const BASE_URL = "https://happyhomeinteriorsvizag.com";
 
 export const metadata: Metadata = {
   title: "About Us | 12+ Years of Interior Design Excellence | Happy Home Interiors",

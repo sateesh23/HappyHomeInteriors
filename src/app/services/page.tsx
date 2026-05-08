@@ -9,7 +9,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 
 import CTABanner from "@/components/CTASection";
 
-const BASE_URL = "https://happyhomeinteriors.in";
+const BASE_URL = "https://happyhomeinteriorsvizag.com";
 
 export const metadata = {
   title: "Interior Design Services in Visakhapatnam | Happy Home Interiors",

@@ -3,7 +3,7 @@ import { getSupabaseClient } from "@/lib/supabase";
 import { Project } from "@/constants/content";
 import ProjectsClient from "./ProjectsClient";
 
-const BASE_URL = "https://happyhomeinteriors.in";
+const BASE_URL = "https://happyhomeinteriorsvizag.com";
 
 export const metadata: Metadata = {
   title: "Interior Design Projects Portfolio | Happy Home Interiors Vizag",

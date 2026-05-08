@@ -10,7 +10,7 @@ import { breadcrumbSchema, faqSchema, localBusinessSchema } from "@/lib/seo";
 const MaterialBrands = dynamic(() => import("@/components/MaterialBrands"), { ssr: true });
 const GoogleReviewsMarquee = dynamic(() => import("@/components/GoogleReviewsMarquee"), { ssr: true });
 
-const BASE_URL = "https://happyhomeinteriors.in";
+const BASE_URL = "https://happyhomeinteriorsvizag.com";
 
 const CITIES_AP = ["Visakhapatnam", "Vijayawada", "Guntur", "Tirupati", "Nellore", "Kakinada", "Rajamahendravaram"];
 const CITIES_TS = ["Hyderabad", "Secunderabad", "Warangal", "Nizamabad", "Karimnagar", "Khammam"];

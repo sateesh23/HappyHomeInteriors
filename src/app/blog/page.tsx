@@ -5,7 +5,7 @@ import { BLOG_POSTS } from "@/data/blogPosts";
 import SectionLabel from "@/components/ui/SectionLabel";
 import CTABanner from "@/components/CTASection";
 
-const BASE_URL = "https://happyhomeinteriors.in";
+const BASE_URL = "https://happyhomeinteriorsvizag.com";
 
 export const metadata: Metadata = {
   title: "Interior Design Blog | Tips, Costs & Trends | Happy Home Interiors",

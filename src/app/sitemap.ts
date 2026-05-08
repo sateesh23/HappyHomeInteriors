@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { BLOG_POSTS } from "@/data/blogPosts";
 import { SERVICE_LOCATION_PAGES } from "@/data/serviceLocationPages";
 
-const BASE_URL = "https://happyhomeinteriors.in";
+const BASE_URL = "https://happyhomeinteriorsvizag.com";
 
 const LOCATIONS = ["visakhapatnam", "hyderabad", "vijayawada", "guntur", "tirupati", "secunderabad", "warangal", "chennai"];
 

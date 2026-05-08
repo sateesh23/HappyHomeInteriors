@@ -46,7 +46,7 @@ const GoogleReviewsMarquee = dynamic(() => import("@/components/GoogleReviewsMar
 export const revalidate = 60; // Re-fetch Supabase data max every 60s
 
 
-const BASE_URL = "https://happyhomeinteriors.in";
+const BASE_URL = "https://happyhomeinteriorsvizag.com";
 
 export const metadata: Metadata = {
   title: "Interior Designers in Vizag | Modular Kitchen & Home Interiors",

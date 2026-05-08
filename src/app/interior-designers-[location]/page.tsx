@@ -17,7 +17,7 @@ const CTABanner = dynamic(() => import("@/components/CTASection"), { ssr: true }
 const MaterialBrands = dynamic(() => import("@/components/MaterialBrands"), { ssr: true });
 
 export const revalidate = 60;
-const BASE_URL = "https://happyhomeinteriors.in";
+const BASE_URL = "https://happyhomeinteriorsvizag.com";
 
 interface LocationData {
   id: string;

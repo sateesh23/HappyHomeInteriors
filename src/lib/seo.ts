@@ -3,7 +3,7 @@
  * Used across all pages for consistent structured data
  */
 
-const BASE_URL = "https://happyhomeinteriors.in";
+const BASE_URL = "https://happyhomeinteriorsvizag.com";
 
 // ── Breadcrumb Schema Generator ──
 export function breadcrumbSchema(items: { name: string; path: string }[]) {

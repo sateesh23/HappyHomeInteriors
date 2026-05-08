@@ -7,7 +7,7 @@ import { AnimatedButton } from "@/components/ui/AnimatedButton";
 import SectionLabel from "@/components/ui/SectionLabel";
 import CTABanner from "@/components/CTASection";
 
-const BASE_URL = "https://happyhomeinteriors.in";
+const BASE_URL = "https://happyhomeinteriorsvizag.com";
 
 export async function generateStaticParams() {
   return SERVICE_LOCATION_PAGES.map((p) => ({ slug: p.slug }));

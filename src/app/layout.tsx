@@ -17,7 +17,7 @@ const inter = Inter({
   preload: true,
 });
 
-const BASE_URL = "https://happyhomeinteriors.in";
+const BASE_URL = "https://happyhomeinteriorsvizag.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

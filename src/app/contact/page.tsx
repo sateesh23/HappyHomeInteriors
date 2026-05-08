@@ -18,7 +18,7 @@ const GoogleReviewsMarquee = dynamic(() => import("@/components/GoogleReviewsMar
   ssr: true,
 });
 
-const BASE_URL = "https://happyhomeinteriors.in";
+const BASE_URL = "https://happyhomeinteriorsvizag.com";
 
 export const metadata: Metadata = {
   title: "Contact Happy Home Interiors | Free Design Consultation Visakhapatnam",

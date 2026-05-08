@@ -6,7 +6,7 @@ import { BLOG_POSTS } from "@/data/blogPosts";
 import { AnimatedButton } from "@/components/ui/AnimatedButton";
 import SectionLabel from "@/components/ui/SectionLabel";
 
-const BASE_URL = "https://happyhomeinteriors.in";
+const BASE_URL = "https://happyhomeinteriorsvizag.com";
 
 export async function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({ slug: post.slug }));
