@@ -43,5 +43,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...corePages, ...locationPages, ...serviceLocationPages, ...blogPages];
+  // State-level pages
+  const statePages: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/home-interiors-andhra-pradesh`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.9 },
+    { url: `${BASE_URL}/interior-designers-telangana`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.9 },
+  ];
+
+  return [...corePages, ...locationPages, ...statePages, ...serviceLocationPages, ...blogPages];
 }

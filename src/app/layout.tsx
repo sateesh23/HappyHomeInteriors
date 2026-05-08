@@ -5,6 +5,8 @@ import Footer from "@/components/Footer";
 import ScrollObserver from "@/components/ScrollObserver";
 import LeadModal from "@/components/LeadModal";
 import ServicePopup from "@/components/ServicePopup";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
+import MobileStickyBar from "@/components/MobileStickyBar";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
@@ -312,6 +314,8 @@ export default function RootLayout({
         <ScrollObserver />
         <LeadModal />
         <ServicePopup />
+        <ExitIntentPopup />
+        <MobileStickyBar />
         {/* Google Analytics — replace G-XXXXXXXXXX with your real GA4 Measurement ID */}
         {/* <GoogleAnalytics gaId="G-XXXXXXXXXX" /> */}
       </body>

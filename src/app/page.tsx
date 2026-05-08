@@ -34,6 +34,10 @@ const MaterialBrands = dynamic(() => import("@/components/MaterialBrands"), {
   ssr: true,
 });
 
+const BudgetEstimator = dynamic(() => import("@/components/BudgetEstimator"), {
+  ssr: true,
+});
+
 const GoogleReviewsMarquee = dynamic(() => import("@/components/GoogleReviewsMarquee"), {
   ssr: true,
 });
@@ -222,6 +226,9 @@ export default async function HomePage() {
 
       {/* SECTION 6.5 — Material Brands Trust */}
       <MaterialBrands />
+
+      {/* SECTION 6.75 — Budget Estimator */}
+      <BudgetEstimator />
 
       {/* SECTION 7 — Final CTA */}
       <CTABanner />

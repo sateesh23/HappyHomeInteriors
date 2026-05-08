@@ -160,6 +160,44 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
           <p className="text-[#6B5F4B] text-sm mb-6 max-w-lg mx-auto">Get a personalized quote for your home. Our designers visit your space, understand your needs, and provide a detailed plan — completely free.</p>
           <AnimatedButton href="/contact#form" text="Get Free Consultation →" openModal={true} />
         </div>
+
+        {/* Internal Links */}
+        <div className="mt-8 p-6 bg-white border border-gray-100 rounded-2xl">
+          <p className="text-xs font-bold text-[#0D0D0D] uppercase tracking-widest mb-3">Explore Our Services</p>
+          <div className="flex flex-wrap gap-2">
+            {[
+              { label: "Modular Kitchen", href: "/modular-kitchen-designers-visakhapatnam" },
+              { label: "2BHK Interiors", href: "/2bhk-home-interiors-visakhapatnam" },
+              { label: "False Ceiling", href: "/false-ceiling-design-visakhapatnam" },
+              { label: "Wardrobes", href: "/wardrobe-designers-visakhapatnam" },
+              { label: "All Services", href: "/services" },
+            ].map((link) => (
+              <Link key={link.href} href={link.href} className="text-xs font-bold text-[#EA580C] bg-[#EA580C]/5 px-4 py-2 rounded-full hover:bg-[#EA580C]/10 transition-colors">
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Related Posts */}
+        {(() => {
+          const related = BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 3);
+          return related.length > 0 ? (
+            <div className="mt-12">
+              <h3 className="text-xl font-black text-[#0D0D0D] mb-6">Related Articles</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                {related.map((rp) => (
+                  <Link key={rp.slug} href={`/blog/${rp.slug}`} className="group">
+                    <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 mb-3">
+                      <Image src={rp.image} alt={rp.title} fill className="object-cover group-hover:scale-[1.03] transition-transform duration-500" sizes="33vw" />
+                    </div>
+                    <p className="text-sm font-bold text-[#0D0D0D] leading-snug group-hover:text-[#EA580C] transition-colors line-clamp-2">{rp.title}</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : null;
+        })()}
       </article>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
